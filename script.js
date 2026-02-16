@@ -122,4 +122,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("heroAvatar").src = profileImage;
     document.getElementById("navAvatar").src = profileImage;
+
+    //Bio
+    window.scrollToBio = function () {
+        document.getElementById("bio").scrollIntoView({
+            behavior: "smooth"
+        });
+    };
 });

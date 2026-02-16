@@ -198,6 +198,28 @@ body.light-mode {
     margin: 0 0 10px 0;
 }
 
+/* BIO */
+.bio-section {
+    max-width: 800px;
+    text-align: center;
+}
+
+.bio-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.clickable-avatar {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.clickable-avatar:hover {
+    transform: scale(1.05);
+}
+
+/*  BODY */
 body {
     margin: 0;
     padding: 0;
