@@ -129,4 +129,20 @@ document.addEventListener("DOMContentLoaded", function () {
             behavior: "smooth"
         });
     };
+
+    //Hamburger Menu
+    window.toggleMenu = function () {
+        const nav = document.querySelector(".nav-links");
+        const burger = document.querySelector(".hamburger");
+
+        nav.classList.toggle("active");
+        burger.classList.toggle("active");
+    };
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+            document.querySelector(".nav-links").classList.remove("active");
+            document.querySelector(".hamburger").classList.remove("active");
+        }
+    });
 });
