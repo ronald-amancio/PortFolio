@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Card Hover Animation</title>
+
+        <!-- FIXED Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <!-- Theme Toggle -->
+        <!--button id="themeToggle" class="theme-btn">🌙</button-->
+
+        <nav class="navbar">
+            <!--div class="logo">RA</div-->
+
+            <!-- LEFT SIDE -->
+            <div class="nav-left">
+                <div class="avatar-container">
+                    <!--img src="https://i.pravatar.cc/40" alt="Profile" class="nav-avatar"-->
+                    <img src="resources/images/profile/prof-pic.jpg" class="nav-avatar">
+                    
+                    <div class="avatar-menu">
+                        <p class="menu-name">Ronald Amancio</p>
+                        <p class="menu-role">Full Stack Developer</p>
+                        <hr>
+                        <a href="#skills">View Skills</a>
+                        <a href="#projects">View Projects</a>
+                        <a href="resources/files/Ronald_Quiroga_Amancio.pdf" target="_blank" title="Download CV" download>Download CV</a>
+                        <hr>
+                        <a href="#">Settings</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RIGHT SIDE -->
+            <ul>
+                <li><button id="themeToggle" class="theme-btn-nav">🌙</button></li>
+                <li><a href="#skills">Skills</a></li>
+                <!--
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                -->
+
+                <li><a href="#" onclick="toggleSection('projects')">Projects</a></li>
+                <li><a href="#" onclick="toggleSection('experience')">Experience</a></li>
+                <li><a href="#" onclick="toggleSection('contact')">Contact</a></li>
+                <!--li><a href="cv.pdf" download class="cv-btn">Download CV</a></li-->
+                <li>
+                    <a href="resources/files/Ronald_Quiroga_Amancio.pdf" target="_blank" title="Download CV" download class="cv-btn">
+                        <span class="cv-text">Download CV</span>
+                        <span class="cv-icon">📄</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <!--img src="https://i.pravatar.cc/150" class="profile-img" alt="Profile"-->
+
+            <img src="resources/images/profile/prof-pic.jpg" class="profile-img">
+            <h1>Ronald Amancio</h1>
+            <h2>Full Stack .NET Developer</h2>
+            <p>I build scalable web applications using .NET, Blazor, and modern frontend technologies.</p>
+            <a href="#contact" class="cta-btn">Contact Me</a>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <h2>Technical Skills</h2>
+
+            <div class="skill">
+                <span>.NET / C#</span>
+                <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+            </div>
+
+            <div class="skill">
+                <span>Blazor</span>
+                <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+            </div>
+
+            <div class="skill">
+                <span>SQL Server</span>
+                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
+            </div>
+
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress"><div class="progress-bar" data-width="75%"></div></div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- TenFreight -->
+                <a href="https://portal.tenfreight.com.au/" target="_blank" class="project-card">
+                    
+                    <div class="project-header">
+                        <h3>TenFreight System</h3>
+                        <img src="resources/images/project-image/TenFreight.png" class="project-icon" alt="TenFreight">
+                    </div>
+
+                    <img src="resources/images/project-image/TenFreight.png" class="project-image" alt="TenFreight">
+
+                    <p>Freight management system built with .NET & Blazor.</p>
+                </a>
+
+                <!-- HR Solution -->
+                <a href="https://hr.sharpsuite.com.au/" target="_blank" class="project-card">
+                    
+                    <div class="project-header">
+                        <h3>HR Solution</h3>
+                        <img src="resources/images/project-image/Sharpsuite HR.png" class="project-icon" alt="Sharpsuite HR">
+                    </div>
+
+                    <img src="resources/images/project-image/Sharpsuite HR.png" class="project-image" alt="Sharpsuite HR">
+
+                    <p>Modern employee management web application.</p>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+         <section id="experience" class="section collapsible">
+            <h2>Experience</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Full Stack Developer</h3>
+                    <span>2023 - Present</span>
+                    <p>Developing enterprise web systems using .NET & Blazor.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Software Developer</h3>
+                    <span>2021 - 2023</span>
+                    <p>Built internal tools and database systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section collapsible">
+            <h2>Contact Me</h2>
+
+            <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Social -->
+        <section class="social-section">
+            <div class="container">
+                <!-- FACEBOOK -->
+                <div class="card" data-url="https://www.facebook.com">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Logo">
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h3>Facebook</h3>
+                        <p>Follow my updates and connect socially.</p>
+                    </div>
+                </div>
+                <!-- LINKEDIN -->
+                <div class="card" data-url="https://www.linkedin.com">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h3>LinkedIn</h3>
+                        <p>Explore my professional experience and skills.</p>
+                    </div>
+                </div>
+                <!-- GITHUB -->
+                <div class="card" data-url="https://www.github.com">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Logo">
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h3>GitHub</h3>
+                        <p>View my projects and source code repositories.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            © 2026 Ronald Amancio
+        </footer>
+        <!-- Script ONLY here -->
+        <script src="script.js"></script>
+
+        <button id="backToTop" class="back-to-top">↑</button>
+    </body>
+</html>
