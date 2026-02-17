@@ -661,3 +661,56 @@ button {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Carousel */
+.projects-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px; /* outer spacing */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 10px; /* spacing between cards */
+    transition: transform 0.5s ease;
+}
+
+.project-card {
+    min-width: 50%; /* show 2 by default */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff0057;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-btn.left {
+    left: -10px;
+}
+
+.carousel-btn.right {
+    right: -10px;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        min-width: 100%;
+        padding: 15px;
+    }
+
+    .projects-carousel {
+        padding: 0 10px;
+    }
+}
