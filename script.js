@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function ()
                 toggleBtn.style.display = "inline";
 
                 toggleBtn.onclick = function () {
-
+ 
                     if (!isExpanded) {
                         descriptionElement.textContent = fullText;
                         toggleBtn.textContent = "See Less";
