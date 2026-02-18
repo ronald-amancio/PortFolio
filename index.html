@@ -60,7 +60,7 @@
             <h1>Ronald Amancio</h1>
             <h2>Full Stack .NET Developer</h2>
             <p>I build scalable web applications using .NET, Blazor, and modern frontend technologies.</p>
-            <a href="#contact" class="cta-btn">Contact Me</a>
+            <a href="#" onclick="toggleSection('contact')" class="cta-btn">Contact Me</a>
         </section>
 
         <!-- BIO -->
@@ -149,7 +149,7 @@
 
                 <div class="carousel-track">
                     <!-- TenFreight -->
-                    <a href="#" target="_blank" class="project-card">
+                    <!--a href="#" target="_blank" class="project-card">
                         <div class="project-header">
                             <h3>TenFreight System</h3>
                             <img src="resources/images/project-image/TenFreight.png" class="project-icon">
@@ -157,10 +157,25 @@
 
                         <img src="resources/images/project-image/TenFreight.png" class="project-image">
                         <p>Freight management system built with .NET & Blazor.</p>
-                    </a>
+                    </a-->
+
+                    <div class="project-card"
+                        data-title="TenFreight System"
+                        data-image="resources/images/project-image/TenFreight.png"
+                        data-description="Enterprise freight management system built using .NET, Blazor, SQL Server, and API integrations. Handles quoting, carrier integration, consignment tracking, and billing automation."
+                        data-tech=".NET, Blazor, SQL Server, REST API">
+
+                        <div class="project-header">
+                            <h3>TenFreight System</h3>
+                            <img src="resources/images/project-image/TenFreight.png" class="project-icon">
+                        </div>
+
+                        <img src="resources/images/project-image/TenFreight.png" class="project-image">
+                        <p>Freight management system built with .NET & Blazor.</p>
+                    </div>
 
                     <!-- HR Solution -->
-                    <a href="#" target="_blank" class="project-card">
+                    <!--a href="#" target="_blank" class="project-card">
                         <div class="project-header">
                             <h3>HR Solution</h3>
                             <img src="resources/images/project-image/Sharpsuite HR.png" class="project-icon">
@@ -168,7 +183,22 @@
 
                         <img src="resources/images/project-image/Sharpsuite HR.png" class="project-image">
                         <p>Modern employee management web application.</p>
-                    </a>
+                    </a-->
+
+                    <div class="project-card"
+                        data-title="HR Portal Solution"
+                        data-image="resources/images/project-image/Sharpsuite HR.png"
+                        data-description="Enterprise HR Portal system built using .NET, Blazor, SQL Server, and API integrations."
+                        data-tech=".NET, Blazor, SQL Server, REST API">
+
+                        <div class="project-header">
+                            <h3>TenFreight System</h3>
+                            <img src="resources/images/project-image/Sharpsuite HR.png" class="project-icon">
+                        </div>
+
+                        <img src="resources/images/project-image/Sharpsuite HR.png" class="project-image">
+                        <p>HR Portal Solution system built with .NET & Blazor.</p>
+                    </div>
 
                     <!-- Task Management -->
                     <a href="#" target="_blank" class="project-card">
@@ -179,6 +209,17 @@
 
                         <img src="resources/images/project-image/Task_Management.png" class="project-image" alt="Sharpsuite HR">
                         <p>Modern task management web application.</p>
+                    </a>
+
+                    <!-- Financing ERP -->
+                    <a href="#" target="_blank" class="project-card">
+                        <div class="project-header">
+                            <h3>Financing ERP</h3>
+                            <img src="resources/images/project-image/Financing_ERP.png" class="project-icon" alt="Sharpsuite HR">
+                        </div>
+
+                        <img src="resources/images/project-image/Financing_ERP.png" class="project-image" alt="Sharpsuite HR">
+                        <p>Financing ERP web application.</p>
                     </a>
 
                     <!-- SNDC Loan Application -->
@@ -280,12 +321,33 @@
                 </div>
             </div>
         </section>
+
         <footer>
             © 2026 Ronald Amancio
         </footer>
+        
         <!-- Script ONLY here -->
         <script src="script.js"></script>
 
         <button id="backToTop" class="back-to-top">↑</button>
+
+        <!-- Project Modal -->
+        <div class="project-modal" id="projectModal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+
+                <h2 id="modalTitle"></h2>
+
+                <img id="modalImage" class="modal-image">
+
+                <!--p id="modalDescription"></p-->
+                <p id="modalDescription" class="modal-description"></p>
+                <span id="toggleDescription" class="read-more-btn"></span>
+
+                <div class="modal-tech" id="modalTech"></div>
+
+                <a href="#" target="_blank" id="modalLink" class="modal-btn">View Project</a>
+            </div>
+        </div>
     </body>
 </html>

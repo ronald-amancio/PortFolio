@@ -201,4 +201,62 @@ document.addEventListener("DOMContentLoaded", function ()
             moveSlide(1);
         }, 5000);
     });
+
+    //Modal Popup
+    const modal = document.getElementById("projectModal");
+
+    document.querySelectorAll(".carousel-track .project-card").forEach(card => {
+        card.addEventListener("click", function () {
+
+            document.getElementById("modalTitle").textContent = this.dataset.title;
+            document.getElementById("modalImage").src = this.dataset.image;
+            document.getElementById("modalTech").textContent = "Tech Stack: " + this.dataset.tech;
+
+            // ===== SEE MORE LOGIC HERE =====
+            const descriptionElement = document.getElementById("modalDescription");
+            const toggleBtn = document.getElementById("toggleDescription");
+
+            const fullText = this.dataset.description;
+            const maxLength = window.innerWidth <= 768 ? 120 : 250;
+
+            if (fullText.length > maxLength) {
+
+                let isExpanded = false;
+
+                descriptionElement.textContent = fullText.substring(0, maxLength) + "...";
+                toggleBtn.textContent = "See More";
+                toggleBtn.style.display = "inline";
+
+                toggleBtn.onclick = function () {
+
+                    if (!isExpanded) {
+                        descriptionElement.textContent = fullText;
+                        toggleBtn.textContent = "See Less";
+                    } else {
+                        descriptionElement.textContent = fullText.substring(0, maxLength) + "...";
+                        toggleBtn.textContent = "See More";
+                    }
+
+                    isExpanded = !isExpanded;
+                };
+
+            } else {
+                descriptionElement.textContent = fullText;
+                toggleBtn.style.display = "none";
+            }
+
+            modal.classList.add("active");
+        });
+    });
+
+    window.closeModal = function () {
+        modal.classList.remove("active");
+    };
+
+    // Close when clicking outside
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
 });
