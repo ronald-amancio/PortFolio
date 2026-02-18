@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function ()
     modal.addEventListener("click", function (e) {
         if (e.target === modal) {
             closeModal();
-        }
+        } 
     });
 
     //Tech Stack

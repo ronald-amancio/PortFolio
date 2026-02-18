@@ -833,7 +833,7 @@ button {
 .tech-stack-link:hover {
     text-decoration: underline;
     transform: translateY(-2px);
-}
+} 
 
 .tech-modal {
     position: fixed;
