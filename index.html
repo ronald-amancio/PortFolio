@@ -23,11 +23,15 @@
                         <p class="menu-name">Ronald Amancio</p>
                         <p class="menu-role">Full Stack Developer</p>
                         <hr>
-                        <a href="#skills">View Skills</a>
-                        <a href="#projects">View Projects</a>
-                        <a href="resources/files/Ronald_Quiroga_Amancio.pdf" target="_blank" title="Download CV" download>Download CV</a>
+                            <a href="#skills">View Skills</a>
+                            <a href="#" onclick="openTechStackModal()">View Tech Stack</a>
+                            <a href="#projects">View Projects</a>
+                            <a href="resources/files/Ronald_Quiroga_Amancio.pdf" target="_blank" title="Download CV" download>Download CV</a>
                         <hr>
-                        <a href="#">Settings</a>
+                        <div class="avatar-menu-footer">
+                            <a href="#" class="menu-link">Settings</a>
+                            <button class="menu-contact-btn" onclick="openContactModal()">Contact Me</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -447,7 +451,7 @@
                     <small class="error-message" id="emailError"></small>
 
                     <input type="text" name="company" placeholder="Company (Optional)">
-                    
+
                     <textarea id="contactMessage" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
                     <small class="error-message" id="messageError"></small>
 

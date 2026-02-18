@@ -218,6 +218,46 @@ body.light-mode {
     transform: scale(1.05);
 }
 
+.avatar-menu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+}
+
+.menu-contact-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #ff0057;
+    color: white;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu-contact-btn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .avatar-menu-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .menu-contact-btn {
+        width: 100%;
+    }
+}
+
 /* Dropdown menu */
 .avatar-menu {
     position: absolute;
