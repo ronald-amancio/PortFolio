@@ -259,4 +259,22 @@ document.addEventListener("DOMContentLoaded", function ()
             closeModal();
         }
     });
+
+    //Tech Stack
+    const techModal = document.getElementById("techModal");
+
+    window.openTechStackModal = function () {
+        techModal.classList.add("active");
+    };
+
+    window.closeTechStackModal = function () {
+        techModal.classList.remove("active");
+    };
+
+    // Close when clicking outside
+    techModal.addEventListener("click", function (e) {
+        if (e.target === techModal) {
+            closeTechStackModal();
+        }
+    });
 });

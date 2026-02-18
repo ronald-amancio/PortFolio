@@ -86,7 +86,10 @@
 
         <!-- Skills -->
         <section id="skills" class="section">
-            <h2>Technical Skills</h2>
+            <h2>
+                Technical Skills
+                <span class="tech-stack-link" onclick="openTechStackModal()">|  Tech Stack</span>
+            </h2>
 
             <div class="skill">
                 <span>ASP.NET | MVC | Web Forms </span>
@@ -94,12 +97,12 @@
             </div>
 
             <div class="skill">
-                <span>Blazor</span>
+                <span>Blazor Server | Web Assembly</span>
                 <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
             </div>
 
             <div class="skill">
-                <span>Web API | Web Service</span>
+                <span>ASP.Net Core Web API | Web Service</span>
                 <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
             </div>
 
@@ -372,6 +375,44 @@
                 <div class="modal-tech" id="modalTech"></div>
 
                 <a href="#" target="_blank" id="modalLink" class="modal-btn">View Project</a>
+            </div>
+        </div>
+
+        <!-- Tech Stack Modal -->
+        <div class="tech-modal" id="techModal">
+            <div class="tech-modal-content">
+                <span class="close-modal" onclick="closeTechStackModal()">&times;</span>
+
+                <h2>💻 Tech Stack</h2>
+
+                <hr>
+
+                <h3>Frontend:</h3>
+                <ul>
+                    <li>🧩 Blazor Server / Blazor WebAssembly</li>
+                    <li>🎨 MudBlazor, Bootstrap 5, HTML/CSS, JavaScript, jQuery, Ajax</li>
+                </ul>
+
+                <h3>Backend:</h3>
+                <ul>
+                    <li>⚙ ASP.NET Core Web API (.NET 6 / 8), C#, ASP.NET MVC</li>
+                    <li>🗄 Entity Framework Core, MS SQL Server, MySQL</li>
+                </ul>
+
+                <h3>Dev Tools & Practices:</h3>
+                <ul>
+                    <li>🧪 xUnit, Moq, Integration Testing</li>
+                    <li>✅ Git & GitHub, GitHub Actions, CI/CD</li>
+                    <li>🛠 Visual Studio, Postman, Swagger</li>
+                    <li>🧠 Agile Methodology (Scrum)</li>
+                </ul>
+
+                <h3>Other Technologies:</h3>
+                <ul>
+                    <li>PHP with CodeIgniter Framework</li>
+                    <li>Java (basic exposure)</li>
+                    <li>Desktop App Development in VB.NET and WinForms (DevExpress)</li>
+                </ul>
             </div>
         </div>
     </body>
