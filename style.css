@@ -876,3 +876,91 @@ button {
         width: 95%;
     }
 }
+
+/* Contact Modal */
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 4000;
+}
+
+.contact-modal.active {
+    display: flex;
+}
+
+.contact-modal-content {
+    background: var(--card-bg);
+    color: var(--card-text);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.contact-modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.contact-modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-modal-content input,
+.contact-modal-content textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(0,0,0,0.05);
+}
+
+.contact-modal-content textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.contact-submit-btn {
+    padding: 12px;
+    border-radius: 25px;
+    background: #ff0057;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .contact-modal-content {
+        padding: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+.error-message {
+    color: #ff0057;
+    font-size: 12px;
+    height: 14px;
+}
+
+.input-error {
+    border: 1px solid #ff0057 !important;
+    background: rgba(255,0,87,0.05);
+}

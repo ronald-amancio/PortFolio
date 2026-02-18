@@ -277,4 +277,76 @@ document.addEventListener("DOMContentLoaded", function ()
             closeTechStackModal();
         }
     });
+
+    //Contact Modal
+    const contactModal = document.getElementById("contactModal");
+
+    window.openContactModal = function () {
+        contactModal.classList.add("active");
+    };
+
+    window.closeContactModal = function () {
+        contactModal.classList.remove("active");
+    };
+
+    contactModal.addEventListener("click", function (e) {
+        if (e.target === contactModal) {
+            closeContactModal();
+        }
+    });
+
+    const contactForm = document.querySelector(".contact-modal-content form");
+
+    contactForm.addEventListener("submit", function (e) {
+
+        let isValid = true;
+
+        const name = document.getElementById("contactName");
+        const email = document.getElementById("contactEmail");
+        const message = document.getElementById("contactMessage");
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
+
+        // Reset
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+
+        name.classList.remove("input-error");
+        email.classList.remove("input-error");
+        message.classList.remove("input-error");
+
+        // Name validation
+        if (name.value.trim() === "") {
+            nameError.textContent = "Full name is required.";
+            name.classList.add("input-error");
+            isValid = false;
+        }
+
+        // Email validation
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (email.value.trim() === "") {
+            emailError.textContent = "Email is required.";
+            email.classList.add("input-error");
+            isValid = false;
+        } else if (!email.value.match(emailPattern)) {
+            emailError.textContent = "Enter a valid email address.";
+            email.classList.add("input-error");
+            isValid = false;
+        }
+
+        // Message validation
+        if (message.value.trim().length < 10) {
+            messageError.textContent = "Message must be at least 10 characters.";
+            message.classList.add("input-error");
+            isValid = false;
+        }
+
+        if (!isValid) {
+            e.preventDefault(); // STOP form submission
+        }
+    });
 });
