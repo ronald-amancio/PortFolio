@@ -158,26 +158,6 @@ html {
     }
 }
 
-/*
-@media (max-width: 900px) {
-
-    .navbar {
-        padding: 12px 20px;
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .cv-text {
-        display: none;
-    }
-
-    .cv-icon {
-        display: inline;
-    }
-}*/
-
 :root {
     --bg-overlay: rgba(0, 0, 0, 0.6);
     --card-bg: rgba(255, 255, 255, 0.85);
