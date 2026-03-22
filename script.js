@@ -295,6 +295,15 @@ document.addEventListener("DOMContentLoaded", function ()
         }
     });
 
+    window.toggleSkill = function(header){
+        //const card = header.parentElement;
+        //card.classList.toggle("active");
+
+        const card = header.closest(".skill-card");
+        console.log(card);
+        card.classList.toggle("active");
+    };
+
     const contactForm = document.querySelector(".contact-modal-content form");
 
     contactForm.addEventListener("submit", function (e) {

@@ -94,11 +94,168 @@
         <section id="skills" class="section">
             <h2>
                 Technical Skills
+                <span class="tech-stack-link" onclick="openTechStackModal()">| Tech Stack</span>
+            </h2>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-card">
+                    <div class="skill-header" onclick="toggleSkill(this)">
+                        <div class="skill-title">
+                            💻 Programming Languages
+                        </div>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <div class="skill-body">
+                        <ul>
+                            <li>Visual Basic .Net</li>
+                            <li>C#</li>
+                            <li>Java</li>
+                            <li>PHP</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Frameworks -->
+                <div class="skill-card">
+                    <div class="skill-header" onclick="toggleSkill(this)">
+                        <div class="skill-title">
+                            ⚙️ Frameworks & Libraries
+                        </div>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <div class="skill-body">
+                        <ul>
+                            <li>ASP.NET (WebForms, MVC, .NET Core, API, Web Service)</li>
+                            <li>Blazor</li>
+                            <li>CodeIgniter</li>
+                            <li>jQuery</li>
+                            <li>ExtJS</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Frontend -->
+                <div class="skill-card">
+                    <div class="skill-header" onclick="toggleSkill(this)">
+                        <div class="skill-title">
+                            🎨 Front-End Technologies
+                        </div>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <div class="skill-body">
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Bootstrap</li>
+                            <li>MudBlazor</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-card">
+                    <div class="skill-header" onclick="toggleSkill(this)">
+                        <div class="skill-title">
+                            🗄 Databases
+                        </div>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <div class="skill-body">
+                        <ul>
+                            <li>Microsoft SQL Server</li>
+                            <li>T-SQL</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Reporting -->
+                <div class="skill-card">
+                    <div class="skill-header" onclick="toggleSkill(this)">
+                        <div class="skill-title">
+                            📊 Reporting Tools
+                        </div>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <div class="skill-body">
+                        <ul>
+                            <li>Crystal Reports</li>
+                            <li>SSRS</li>
+                            <li>Jasper Reports</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Version Control -->
+                <div class="skill-card">
+                    <div class="skill-header" onclick="toggleSkill(this)">
+                        <div class="skill-title">
+                            🔧 Version Control
+                        </div>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <div class="skill-body">
+                        <ul>
+                            <li>Git</li>
+                            <li>Tortoise SVN</li>
+                            <li>Visual SVN</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Cloud -->
+                <div class="skill-card">
+                    <div class="skill-header" onclick="toggleSkill(this)">
+                        <div class="skill-title">
+                            ☁️ Cloud & Hosting
+                        </div>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <div class="skill-body">
+                        <ul>
+                            <li>Microsoft Azure</li>
+                            <li>Plesk</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Project Tools -->
+                <div class="skill-card">
+                    <div class="skill-header" onclick="toggleSkill(this)">
+                        <div class="skill-title">
+                            📁 Project Management Tools
+                        </div>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <div class="skill-body">
+                        <ul>
+                            <li>Asana</li>
+                            <li>ClickUp</li>
+                            <li>GitHub Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--section id="skills" class="section">
+            <h2>
+                Technical Skills
                 <span class="tech-stack-link" onclick="openTechStackModal()">|  Tech Stack</span>
             </h2>
 
             <div class="skill">
-                <span>ASP.NET | MVC | Web Forms </span>
+                <span>ASP.NET | WEB FORMS | MVC | REST API | WEB SERVICE </span>
                 <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
             </div>
 
@@ -108,13 +265,13 @@
             </div>
 
             <div class="skill">
-                <span>ASP.Net Core Web API | Web Service</span>
-                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>JavaScript | ExtJS</span>
+                <span>JavaScript | JQuery | ExtJS</span>
                 <div class="progress"><div class="progress-bar" data-width="75%"></div></div>
+            </div>
+            
+            <div class="skill">
+                <span>HTML5 | CSS | Bootstrap | MudBlazor</span>
+                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
             </div>
 
             <div class="skill">
@@ -133,20 +290,30 @@
             </div>
 
             <div class="skill">
-                <span>VB .Net</span>
+                <span>Visual Basic 6 | Visual Basic .Net</span>
                 <div class="progress"><div class="progress-bar" data-width="75%"></div></div>
             </div>
 
             <div class="skill">
-                <span>MySQL | SQL Server</span>
+                <span>MSSQL | T-SQL | MySQL</span>
                 <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
             </div>
 
             <div class="skill">
-                <span>Git | Visual SVN</span>
+                <span>Version Control (Git | Visual SVN)</span>
                 <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
             </div>
-        </section>
+
+            <div class="skill">
+                <span>Cloud & Hosting (Microsoft Azure | Plesk)</span>
+                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
+            </div>
+
+            <div class="skill">
+                <span>Project Management & Collaboration Tools (Asana | ClickUp | GitHub Projects)</span>
+                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
+            </div>
+        </section-->
 
         <!-- Projects -->
         <section id="projects" class="section">

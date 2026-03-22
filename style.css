@@ -984,3 +984,154 @@ button {
     border: 1px solid #ff0057 !important;
     background: rgba(255,0,87,0.05);
 }
+
+/* ========================= */
+/* PREMIUM SKILLS UI */
+/* ========================= */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    align-items:start;
+}
+
+@media (max-width:768px){
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* Card */
+
+.skill-card
+{
+    position:relative;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-radius:14px;
+    /*padding:0;*/
+    /*overflow:hidden;*/
+    transition:0.3s ease;
+    border:1px solid rgba(255,255,255,0.15);
+    overflow: visible;
+
+}
+
+
+/* gradient border */
+
+.skill-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:14px;
+
+    background:linear-gradient(
+        120deg,
+        #00f5ff,
+        #7c3aed,
+        #ff0057
+    );
+
+    opacity:0.15;
+    z-index:-1;   /* ✅ important */
+}
+
+
+/* hover glow */
+
+.skill-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 0 10px rgba(0,255,255,0.3),
+        0 0 20px rgba(124,58,237,0.3),
+        0 0 30px rgba(255,0,87,0.3);
+
+}
+
+
+/* header */
+
+.skill-header{
+
+    padding:16px;
+
+    font-weight:bold;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    background:rgba(0,0,0,0.2);
+
+}
+
+
+/* icon */
+
+.skill-title{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+
+/* arrow */
+
+.arrow{
+    transition:0.3s;
+}
+
+
+/* body */
+
+.skill-body{
+
+    /*max-height:0;
+    overflow:hidden;
+
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease;
+
+    padding:0 16px;*/
+
+    height:0;
+    overflow:hidden;
+
+    transition:height 0.35s ease;
+
+    padding:0 16px;
+}
+
+
+.skill-body ul{
+
+    margin:10px 0 15px 0;
+    padding-left:18px;
+
+    line-height:1.7;
+}
+
+
+/* active */
+
+.skill-card.active .skill-body{
+    /*max-height:500px;
+    opacity: 1;*/
+
+    height:auto;
+    padding:10px 16px 16px 16px;
+}
+
+.skill-card.active .arrow{
+    transform:rotate(180deg);
+}
