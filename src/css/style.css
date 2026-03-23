@@ -400,11 +400,12 @@ header h1 {
 }
 
 .card:nth-child(1):hover {
-    box-shadow: 0 0 20px rgba(24, 119, 242, 0.7);
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.7);
 }
 
 .card:nth-child(2):hover {
-    box-shadow: 0 0 20px rgba(10, 102, 194, 0.7);
+    /*box-shadow: 0 0 20px rgba(24, 119, 242, 0.7);*/
+    box-shadow: 0 0 20px rgba(20, 168, 0, 0.7);
 }
 
 .card:nth-child(3):hover {

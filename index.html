@@ -8,7 +8,7 @@
         <!-- FIXED Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <!-- Pre-defined Styling -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="src/css/style.css">
     </head>
     <body>
         <!-- Theme Toggle -->
@@ -59,17 +59,18 @@
             </ul>
         </nav>
 
+        <!-- Hero -->
         <section class="hero">
             <img src="resources/images/profile/prof-pic.jpg" class="profile-img clickable-avatar"
                         onclick="scrollToBio()">
             <h1>Ronald Amancio</h1>
             <h2>Full Stack .NET Developer</h2>
-            <p>I build scalable web applications using .NET, Blazor, and modern frontend technologies.</p>
+            <p>I build scalable web applications using .NET Core, Blazor, Angular and modern frontend technologies.</p>
             <!--a href="#" onclick="toggleSection('contact')" class="cta-btn">Contact Me</a-->
             <a href="#" class="cta-btn" onclick="openContactModal()">Contact Me</a>
         </section>
 
-        <!-- BIO -->
+        <!-- BIO / About Me -->
         <section id="bio" class="section bio-section">
             <h2>About Me</h2>
 
@@ -80,7 +81,7 @@
                 </p>
 
                 <p>
-                    My expertise includes .NET, Blazor, SQL Server, and modern frontend
+                    My expertise includes ASP.NET, .Net Core, Blazor, Angular, PostgreSQL, SQL Server, and modern frontend
                     development using JavaScript and responsive design principles.
                 </p>
 
@@ -131,6 +132,7 @@
                         <ul>
                             <li>ASP.NET (WebForms, MVC, .NET Core, API, Web Service)</li>
                             <li>Blazor</li>
+                            <li>Angular</li>
                             <li>CodeIgniter</li>
                             <li>jQuery</li>
                             <li>ExtJS</li>
@@ -248,73 +250,6 @@
             </div>
         </section>
 
-        <!--section id="skills" class="section">
-            <h2>
-                Technical Skills
-                <span class="tech-stack-link" onclick="openTechStackModal()">|  Tech Stack</span>
-            </h2>
-
-            <div class="skill">
-                <span>ASP.NET | WEB FORMS | MVC | REST API | WEB SERVICE </span>
-                <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>Blazor Server | Web Assembly</span>
-                <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>JavaScript | JQuery | ExtJS</span>
-                <div class="progress"><div class="progress-bar" data-width="75%"></div></div>
-            </div>
-            
-            <div class="skill">
-                <span>HTML5 | CSS | Bootstrap | MudBlazor</span>
-                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>PHP Codeigniter</span>
-                <div class="progress"><div class="progress-bar" data-width="70%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>Java J2EE</span>
-                <div class="progress"><div class="progress-bar" data-width="70%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>C#</span>
-                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>Visual Basic 6 | Visual Basic .Net</span>
-                <div class="progress"><div class="progress-bar" data-width="75%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>MSSQL | T-SQL | MySQL</span>
-                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>Version Control (Git | Visual SVN)</span>
-                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>Cloud & Hosting (Microsoft Azure | Plesk)</span>
-                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
-            </div>
-
-            <div class="skill">
-                <span>Project Management & Collaboration Tools (Asana | ClickUp | GitHub Projects)</span>
-                <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
-            </div>
-        </section-->
-
         <!-- Projects -->
         <section id="projects" class="section">
             <h2>Featured Projects</h2>
@@ -327,7 +262,7 @@
                         data-title="TenFreight Portal"
                         data-image="resources/images/project-image/TenFreight.png"
                         data-description="Enterprise freight management system built using .NET, Blazor(MudBlazor), SQL Server, and API integrations. Handles quoting, carrier integration, consignment tracking, and billing automation."
-                        data-tech=".NET, Blazor, SQL Server, REST API">
+                        data-tech=".NET Core, Blazor, SQL Server, REST API">
 
                         <div class="project-header">
                             <h3>TenFreight Portal</h3>
@@ -343,7 +278,7 @@
                         data-title="HR Portal Solution"
                         data-image="resources/images/project-image/Sharpsuite HR.png"
                         data-description="Enterprise HR Portal system built using .NET, Blazor(MudBlazor), SQL Server, and API integrations."
-                        data-tech=".NET, Blazor, SQL Server, REST API">
+                        data-tech=".NET Core, Blazor, SQL Server, REST API">
 
                         <div class="project-header">
                             <h3>HR Portal Solution</h3>
@@ -359,7 +294,7 @@
                         data-title="Task Management"
                         data-image="resources/images/project-image/Task_Management.png"
                         data-description="Task Management system built using .NET, Blazor, SQL Server, and API integrations."
-                        data-tech=".NET, Blazor, SQL Server, REST API">
+                        data-tech=".NET Core, Blazor, SQL Server, REST API">
 
                         <div class="project-header">
                             <h3>Task Management</h3>
@@ -384,7 +319,7 @@
                         data-title="Financing ERP"
                         data-image="resources/images/project-image/Financing_ERP.png"
                         data-description="Financing ERP system built using C# .NET, ExtJs, SQL Server and Stored procedure."
-                        data-tech="C# .NET, ExtJs, SQL Server and Stored procedure">
+                        data-tech="C# ASP.NET, ExtJs, SQL Server and Stored procedure">
 
                         <div class="project-header">
                             <h3>Financing ERP</h3>
@@ -409,7 +344,7 @@
                         data-title="Loan Application"
                         data-image="resources/images/project-image/SNDCLoan.png"
                         data-description="Loan Application system built using C# with SQL Server and Stored procedure."
-                        data-tech="C#, SQL Server">
+                        data-tech="C#, ADO.Net, SQL Server">
 
                         <div class="project-header">
                             <h3>Loan Application</h3>
@@ -434,7 +369,7 @@
                         data-title="JCPO SportsHub"
                         data-image="resources/images/project-image/JCPO_SportsHub.png"
                         data-description="JCPO SportsHub system built using C# with ASP.Net Core, Entity Framework Core, MySQL"
-                        data-tech="C# with ASP.Net Core, Entity Framework Core, MySQL">
+                        data-tech="C# with .Net Core, Entity Framework Core, MySQL">
 
                         <div class="project-header">
                             <h3>JCPO SportsHub</h3>
@@ -451,7 +386,7 @@
         </section>
 
         <!-- Experience Timeline -->
-         <section id="experience" class="section collapsible">
+        <!--section id="experience" class="section collapsible">
             <h2>Experience</h2>
 
             <div class="timeline">
@@ -467,7 +402,7 @@
                     <p>Built internal tools and database systems.</p>
                 </div>
             </div>
-        </section>
+        </section-->
 
         <!-- Contact Section -->
         <!--section id="contact" class="section collapsible">
@@ -485,7 +420,7 @@
         <section class="social-section">
             <div class="container">
                 <!-- FACEBOOK -->
-                <div class="card" data-url="https://www.facebook.com">
+                <!--div class="card" data-url="https://www.facebook.com">
                     <div class="face face1">
                         <div class="content">
                             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Logo">
@@ -495,9 +430,10 @@
                         <h3>Facebook</h3>
                         <p>Follow my updates and connect socially.</p>
                     </div>
-                </div>
+                </div-->
+
                 <!-- LINKEDIN -->
-                <div class="card" data-url="https://www.linkedin.com">
+                <div class="card" data-url="https://www.linkedin.com/in/ronald-amancio-41404570/">
                     <div class="face face1">
                         <div class="content">
                             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
@@ -508,8 +444,23 @@
                         <p>Explore my professional experience and skills.</p>
                     </div>
                 </div>
+
+                <!-- UPWORK -->
+                <div class="card" data-url="https://www.upwork.com/freelancers/~01644555218b50748f">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork Logo">
+                        </div>
+                    </div>
+
+                    <div class="face face2">
+                        <h3>Upwork</h3>
+                        <p>Hire me on Upwork for freelance and contract projects.</p>
+                    </div>
+                </div>
+
                 <!-- GITHUB -->
-                <div class="card" data-url="https://www.github.com">
+                <div class="card" data-url="https://github.com/ronald-amancio">
                     <div class="face face1">
                         <div class="content">
                             <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Logo">
@@ -528,7 +479,7 @@
         </footer>
 
         <!-- Script ONLY here -->
-        <script src="script.js"></script>
+        <script src="src/js/script.js"></script>
 
         <button id="backToTop" class="back-to-top">↑</button>
 
