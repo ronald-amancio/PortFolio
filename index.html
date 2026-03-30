@@ -545,7 +545,12 @@
             <div class="contact-modal-content">
                 <span class="close-modal" onclick="closeContactModal()">&times;</span>
 
-                <h2>Let’s Connect</h2>
+                <h2>Let’s Connect | 
+                        <a href="https://calendly.com/ronsynt/new-meeting" target="_blank">
+                            <!--button type="button" class="schedule-btn">Schedule with me a Meeting</button-->
+                            <span class="schedule-btn">Schedule with me a Meeting</span>
+                        </a>
+                </h2>
                 <p class="contact-subtitle">
                     I’m open to freelance projects, collaborations, and full-time opportunities.
                 </p>
@@ -572,6 +577,12 @@
 
                     <textarea id="contactMessage" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
                     <small class="error-message" id="messageError"></small>
+
+                    <!--div class="schedule-meeting">
+                        <a href="https://calendly.com/ronsynt/new-meeting" target="_blank">
+                            <span class="schedule-btn">Schedule with me a Meeting</span>
+                        </a>
+                    </div-->
 
                     <button type="submit" class="contact-submit-btn">Send Message</button>
                 </form>

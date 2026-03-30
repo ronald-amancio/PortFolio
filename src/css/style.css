@@ -1136,3 +1136,10 @@ button {
 .skill-card.active .arrow{
     transform:rotate(180deg);
 }
+
+/* Schedule a meeting */
+.schedule-meeting {
+    margin-top: 0px;
+    margin-bottom: 5px !important;
+    text-align: center;
+}
