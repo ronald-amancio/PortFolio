@@ -158,12 +158,22 @@ html {
     }
 }
 
+
 :root {
     --bg-overlay: rgba(0, 0, 0, 0.6);
     --card-bg: rgba(255, 255, 255, 0.85);
     --text-color: white;
     --card-text: #111;
 }
+
+/*
+:root {
+  --primary: #00f2fe;
+  --secondary: #4facfe; 
+  --accent: #f093fb; 
+  --bg-dark: #0f172a; 
+  --glass: rgba(255, 255, 255, 0.1);
+}*/
 
 body.light-mode {
     --bg-overlay: rgba(255, 255, 255, 0.75);
