@@ -1,808 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ronald Amancio, a Full Stack .NET Engineer and AI Automation Specialist building enterprise applications, integrations, and intelligent workflows.">
+    <meta name="theme-color" content="#071722">
+    <link rel="icon" type="image/jpeg" href="resources/images/profile/prof-pic.jpg">
+    <meta property="og:title" content="Ronald Amancio | Full Stack .NET Engineer">
+    <meta property="og:description" content="Enterprise software, API integrations, and AI automation built around real business operations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ronald-amancio.github.io/PortFolio/">
+    <title>Ronald Amancio | Full Stack .NET Engineer &amp; AI Automation Specialist</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-        <!-- FIXED Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <!-- Pre-defined Styling -->
-        <link rel="stylesheet" href="src/css/style.css">
-    </head>
-    <body>
-        <!-- Theme Toggle -->
-        <nav class="navbar">
-            <!-- LEFT SIDE -->
-            <div class="nav-left">
-                <div class="avatar-container">
-                    <!--img src="https://i.pravatar.cc/40" alt="Profile" class="nav-avatar"-->
-                    <img src="resources/images/profile/prof-pic.jpg" class="nav-avatar">
-                    
-                    <div class="avatar-menu">
-                        <p class="menu-name">Ronald Amancio</p>
-                        <p class="menu-role">
-                            Full Stack Software Engineer <br>
-                            AI Automation <br>
-                            Implementation Specialist
-                        </p>
-                        <hr>
-                            <a href="#skills">View Skills</a>
-                            <a href="#" onclick="openTechStackModal()">View Tech Stack</a>
-                            <a href="#projects">View Projects</a>
-                            <a href="resources/files/Ronald_Quiroga_Amancio.pdf" target="_blank" title="Download CV" download>Download CV</a>
-                        <hr>
-                        <div class="avatar-menu-footer">
-                            <a href="#" class="menu-link">Settings</a>
-                            <button class="menu-contact-btn" onclick="openContactModal()">Hire Me</button>
-                        </div>
-                    </div>
-                </div>
+    <header class="site-header" id="top">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a class="brand" href="#top" aria-label="Ronald Amancio home">R<span>A</span></a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#projects">Projects</a>
+                <a href="#services">Expertise</a>
+                <a href="#experience">Experience</a>
+                <a href="#about">About</a>
+                <button class="button button-small button-primary open-contact" type="button">Contact</button>
             </div>
-            
-            <!-- RIGHT SIDE -->
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <ul class="nav-links">
-                <li><button id="themeToggle" class="theme-btn-nav">🌙</button></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#" onclick="toggleSection('projects')">Projects</a></li>
-                <li><a href="#" onclick="toggleSection('experience')">Experience</a></li>
-                <!--li><a href="#" onclick="toggleSection('contact')">Contact</a></li-->
-                <li><a href="#" onclick="openContactModal()">Contact</a></li>
-                <li>
-                    <a href="resources/files/Ronald_Quiroga_Amancio.pdf" download class="cv-btn">
-                        <span class="cv-text">Download CV</span>
-                        <span class="cv-icon">📄</span>
-                    </a>
-                </li>
-            </ul>
         </nav>
+    </header>
 
-        <!-- Hero -->
-        <section class="hero">
-            <img src="resources/images/profile/prof-pic.jpg" class="profile-img clickable-avatar"
-                        onclick="scrollToBio()">
-            <h1>Ronald Amancio</h1>
-            <h2>Full Stack Software Engineer <br>
-                AI Automation <br>
-                Implementation Specialist
-            </h2>   
-            <!--p>I build scalable web applications using C#, Java, .NET Core, Blazor, React and modern frontend technologies.</p-->
-            <!--a href="#" onclick="toggleSection('contact')" class="cta-btn">Hire Me</a-->
-            <a href="#" class="cta-btn" onclick="openContactModal()">Hire Me</a>
-        </section>  
-
-        <!-- BIO / About Me -->
-        <section id="bio" class="section bio-section">
-            <h2>About Me</h2>
-
-            <div class="bio-content">
-                <p>
-                    I am a Full Stack Software Engineer | AI Automation & Implementation Specialist with experience building enterprise-level
-                    applications including ERP, Loans & Financing, Freight Management Systems and HR platforms.
-                </p>
-
-                <p>
-                    My expertise includes ASP.NET, MVC .Net Core, Blazor, React, PostgreSQL, SQL Server, WordPress, API Integration and modern frontend
-                    development using JavaScript and responsive design principles. 
-                    Lately, I have been exploring AI integration and automation using tools like Retell AI, n8n, Make, and Zapier to enhance business processes.
-                </p>
-
-                <p>
-                    I enjoy building scalable, maintainable systems that solve real business problems.
-                </p>
+    <main id="main-content">
+        <section class="hero shell" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="availability"><span aria-hidden="true"></span> Open to remote and contract opportunities</p>
+                <p class="eyebrow">Full Stack .NET Engineer · AI Automation Specialist</p>
+                <h1 id="hero-title">I build business systems that <em>automate real work.</em></h1>
+                <p class="hero-intro">I create scalable applications with .NET, Blazor, React, SQL Server, APIs, and AI-powered workflows that make complex operations simpler.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">View my work <span aria-hidden="true">→</span></a>
+                    <a class="button button-secondary" href="resources/files/Ronald_Quiroga_Amancio.pdf" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download CV</a>
+                </div>
+            </div>
+            <div class="hero-portrait">
+                <div class="portrait-glow" aria-hidden="true"></div>
+                <img src="resources/images/profile/prof-pic.jpg" alt="Portrait of Ronald Amancio" width="480" height="480">
+                <p class="portrait-signature">Ronald<br>Amancio</p>
             </div>
         </section>
 
-        <!-- Skills -->
-        <section id="skills" class="section">
-            <h2>
-                Technical Expertise <span class="tech-stack-link" onclick="openTechStackModal()">| Tech Stack</span>
-            </h2>
+        <section class="proof shell" aria-label="Professional highlights">
+            <article class="proof-item"><i class="fa-regular fa-calendar" aria-hidden="true"></i><div><strong>16+ years</strong><span>building software</span></div></article>
+            <article class="proof-item"><i class="fa-solid fa-database" aria-hidden="true"></i><div><strong>Enterprise systems</strong><span>from operations to reporting</span></div></article>
+            <article class="proof-item"><i class="fa-solid fa-bolt" aria-hidden="true"></i><div><strong>AI automation</strong><span>connected to real workflows</span></div></article>
+        </section>
 
-            <div class="skills-grid">
-                <!-- Programming Languages -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            💻 Programming Languages
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
+        <section class="section shell" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">Selected work</p><h2 id="projects-title">Real systems. Real business problems.</h2></div>
+                <p>Explore enterprise platforms, independent builds, and AI automation projects.</p>
+            </div>
 
-                    <div class="skill-body">
-                        <ul>
-                            <li>Visual Basic .Net</li>
-                            <li>C#</li>
-                            <li>Java</li>
-                            <li>PHP</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Frameworks -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            ⚙️ Frameworks & Libraries
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
+            <div class="project-filters" role="group" aria-label="Filter projects">
+                <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-button" type="button" data-filter="dotnet" aria-pressed="false">.NET</button>
+                <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI Automation</button>
+                <button class="filter-button" type="button" data-filter="enterprise" aria-pressed="false">Enterprise</button>
+                <button class="filter-button" type="button" data-filter="independent" aria-pressed="false">Independent</button>
+            </div>
 
-                    <div class="skill-body">
-                        <ul>
-                            <li>ASP.NET (WebForms, MVC, .NET Core, API, Web Service)</li>
-                            <li>Blazor</li>
-                            <li>React</li>
-                            <li>CodeIgniter</li>
-                            <li>jQuery</li>
-                            <li>ExtJS</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Frontend -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            🎨 Front-End Technologies
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
+            <article class="featured-project project-item" data-category="dotnet enterprise">
+                <button class="project-hit-area" type="button" data-title="TenFreight Portal" data-image="resources/images/project-image/TenFreight.png" data-description="An enterprise transport management platform supporting freight quotations, shipment bookings, carrier integrations, consignment tracking, operational workflows, and billing automation." data-tech=".NET 8, Blazor, React, SQL Server, REST APIs"><span class="sr-only">View TenFreight Portal case study</span></button>
+                <div class="featured-image"><img src="resources/images/project-image/TenFreight.png" alt="TenFreight transport management portal dashboard" width="1200" height="675" fetchpriority="high"></div>
+                <div class="featured-content"><span class="project-label">Featured case study</span><h3>TenFreight Portal</h3><p>Freight operations, tracking, quotations, carrier integrations, and billing in one scalable platform.</p><div class="tech-tags" aria-label="Technologies"><span>.NET</span><span>React</span><span>SQL Server</span><span>REST API</span></div><span class="project-cta">View case study <span aria-hidden="true">→</span></span></div>
+            </article>
 
-                    <div class="skill-body">
-                        <ul>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Bootstrap</li>
-                            <li>MudBlazor</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="project-grid" id="projectGrid">
+                <article class="project-card project-item" data-category="dotnet enterprise">
+                    <button class="project-hit-area" type="button" data-title="HR Portal Solution" data-image="resources/images/project-image/Sharpsuite HR.png" data-description="An enterprise HR and CRM platform for employee management, recruitment, documents, announcements, Kanban task tracking, role-based access, and performance evaluations." data-tech=".NET Core, Blazor, MudBlazor, SQL Server, REST API"><span class="sr-only">View HR Portal Solution</span></button>
+                    <img src="resources/images/project-image/Sharpsuite HR.png" alt="HR portal employee management interface" width="800" height="450" loading="lazy"><div class="project-card-copy"><div><h3>HR Portal</h3><span>Enterprise</span></div><span class="card-arrow" aria-hidden="true">→</span></div>
+                </article>
+                <article class="project-card project-item" data-category="dotnet enterprise">
+                    <button class="project-hit-area" type="button" data-title="Task Management" data-image="resources/images/project-image/Task_Management.png" data-description="A task management application with collaborative workflows, status tracking, role-based access, and API integrations." data-tech=".NET Core, Blazor, SQL Server, REST API"><span class="sr-only">View Task Management project</span></button>
+                    <img src="resources/images/project-image/Task_Management.png" alt="Task management application interface" width="800" height="450" loading="lazy"><div class="project-card-copy"><div><h3>Task Management</h3><span>.NET</span></div><span class="card-arrow" aria-hidden="true">→</span></div>
+                </article>
+                <article class="project-card project-item" data-category="dotnet enterprise">
+                    <button class="project-hit-area" type="button" data-title="Financing ERP" data-image="resources/images/project-image/Financing_ERP.png" data-description="An ERP system supporting financing operations and business workflows with database-driven reporting and stored procedures." data-tech="C#, ASP.NET, ExtJS, SQL Server, Stored Procedures"><span class="sr-only">View Financing ERP project</span></button>
+                    <img src="resources/images/project-image/Financing_ERP.png" alt="Financing ERP cheque voucher screen" width="800" height="450" loading="lazy"><div class="project-card-copy"><div><h3>Financing ERP</h3><span>Enterprise</span></div><span class="card-arrow" aria-hidden="true">→</span></div>
+                </article>
+                <article class="project-card project-item" data-category="dotnet independent">
+                    <button class="project-hit-area" type="button" data-title="Loan & Financing Application" data-image="resources/images/project-image/SNDCLoan.png" data-description="A desktop loan and financing management system covering applications, approvals, amortization schedules, payment posting, balance tracking, and financial reports." data-tech="C#, .NET Framework, WinForms, ADO.NET, SQL Server"><span class="sr-only">View Loan and Financing Application</span></button>
+                    <img src="resources/images/project-image/SNDCLoan.png" alt="Loan and financing desktop application" width="800" height="450" loading="lazy"><div class="project-card-copy"><div><h3>Loan Application</h3><span>Independent</span></div><span class="card-arrow" aria-hidden="true">→</span></div>
+                </article>
+                <article class="project-card project-item" data-category="ai independent">
+                    <button class="project-hit-area" type="button" data-title="AI-Powered Voice Agent" data-image="resources/images/project-image/AI_Voice_Call.png" data-description="An AI voice solution that places outbound calls, holds natural-language conversations, collects customer information, confirms shipment details, and triggers backend workflows." data-tech="Retell AI, n8n, REST API, Webhooks" data-link="https://www.youtube.com/watch?v=qAvnf1x5V0Q" data-link-label="Watch demo"><span class="sr-only">View AI-Powered Voice Agent</span></button>
+                    <img src="resources/images/project-image/AI_Voice_Call.png" alt="AI voice agent conversation workflow" width="800" height="450" loading="lazy"><div class="project-card-copy"><div><h3>AI Voice Agent</h3><span>AI Automation</span></div><span class="card-arrow" aria-hidden="true">→</span></div>
+                </article>
+                <article class="project-card project-item" data-category="ai independent">
+                    <button class="project-hit-area" type="button" data-title="Customer Inquiry Automation" data-image="resources/images/project-image/AI Customer Enquiry Automation.png" data-description="An AI-powered workflow that captures customer inquiries, processes the request with AI, records structured data, and automates email follow-up." data-tech="n8n, Groq, Google Sheets, Gmail, Webhooks" data-link="https://www.loom.com/share/274eb710a2d1429dbaa09366927c70a4" data-link-label="Watch demo"><span class="sr-only">View Customer Inquiry Automation</span></button>
+                    <img src="resources/images/project-image/AI Customer Enquiry Automation.png" alt="Customer inquiry automation workflow" width="800" height="450" loading="lazy"><div class="project-card-copy"><div><h3>Automation Workflow</h3><span>AI Automation</span></div><span class="card-arrow" aria-hidden="true">→</span></div>
+                </article>
+                <article class="project-card project-item additional-project" data-category="dotnet independent">
+                    <button class="project-hit-area" type="button" data-title="JCPO SportsHub" data-image="resources/images/project-image/JCPO_SportsHub.png" data-description="A sports management application built with ASP.NET Core, Entity Framework Core, and MySQL." data-tech="C#, ASP.NET Core, Entity Framework Core, MySQL"><span class="sr-only">View JCPO SportsHub project</span></button>
+                    <img src="resources/images/project-image/JCPO_SportsHub.png" alt="JCPO SportsHub application" width="800" height="450" loading="lazy"><div class="project-card-copy"><div><h3>JCPO SportsHub</h3><span>Independent</span></div><span class="card-arrow" aria-hidden="true">→</span></div>
+                </article>
+                <article class="project-card project-item additional-project" data-category="ai independent">
+                    <button class="project-hit-area" type="button" data-title="AI Job Applications CRM" data-image="resources/images/project-image/AI Job Applications CRM v2.png" data-description="A CRM-style workflow concept for organizing job applications and supporting repetitive application-management tasks with automation." data-tech="AI Automation, CRM Workflow"><span class="sr-only">View AI Job Applications CRM</span></button>
+                    <img src="resources/images/project-image/AI Job Applications CRM v2.png" alt="AI job applications CRM workflow" width="800" height="450" loading="lazy"><div class="project-card-copy"><div><h3>Job Applications CRM</h3><span>AI Automation</span></div><span class="card-arrow" aria-hidden="true">→</span></div>
+                </article>
+            </div>
+            <button class="button button-wide button-secondary" id="showAllProjects" type="button" aria-expanded="false">Explore all projects <span aria-hidden="true">↓</span></button>
+        </section>
 
-                <!-- Database -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            🗄 Databases
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
-
-                    <div class="skill-body">
-                        <ul>
-                            <li>Microsoft SQL Server</li>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- CRM / WordPress / AI -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            🤖 CRM, WordPress & AI Integration
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
-
-                    <div class="skill-body">
-                        <ul>
-                            <li>🌐 WordPress CMS Development</li>
-                            <li>🧩 Custom WordPress Plugin Development</li>
-                            <li>📈 CRM Integration</li>
-                            <li>🔗 REST API Integration</li>
-                            <li>🤖 AI Chatbot Plugin Development</li>
-                            <li>🤖 AI Voice Call Automation</li>
-                            <li>⚡ Webhook & Third-Party API Integration</li>
-                            <li>🔐 JWT Authentication & Session Handling</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Testing & QA -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            🧪 Testing & Quality Assurance
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
-
-                    <div class="skill-body">
-                        <ul>
-                            <li>✅ Unit Testing (xUnit)</li>
-                            <li>🧪 Mock Testing using Moq</li>
-                            <li>🔗 API Testing with Postman & Swagger</li>
-                            <li>⚙ Integration Testing</li>
-                            <li>🌐 Web Application Testing</li>
-                            <li>🔄 REST API Validation & Error Handling</li>
-                            <li>🛡 Authentication & Security Testing</li>
-                            <li>📋 Test Case & Bug Verification</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Reporting -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            📊 Reporting Tools
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
-
-                    <div class="skill-body">
-                        <ul>
-                            <li>Crystal Reports</li>
-                            <li>SSRS</li>
-                            <li>Jasper Reports</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Version Control -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            🔧 Version Control
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
-
-                    <div class="skill-body">
-                        <ul>
-                            <li>Git</li>
-                            <li>Tortoise SVN</li>
-                            <li>Visual SVN</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Cloud -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            ☁️ Cloud & Hosting
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
-
-                    <div class="skill-body">
-                        <ul>
-                            <li>Microsoft Azure</li>
-                            <li>Plesk</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Project Tools -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            📁 Project Management Tools
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
-
-                    <div class="skill-body">
-                        <ul>
-                            <li>Asana</li>
-                            <li>ClickUp</li>
-                            <li>GitHub Projects</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Automations -->
-                <div class="skill-card">
-                    <div class="skill-header" onclick="toggleSkill(this)">
-                        <div class="skill-title">
-                            <img src="https://cdn.simpleicons.org/anthropic"
-                                alt="Claude"
-                                width="20"
-                                height="20"
-                                style="vertical-align:middle; margin-right:8px;">
-                            Automations
-                        </div>
-                        <span class="arrow">▼</span>
-                    </div>
-
-                    <div class="skill-body">
-                        <ul>
-                            <li>
-                                <img src="https://cdn.simpleicons.org/anthropic" width="16" height="16">
-                                Claude
-                            </li>
-                            <li>
-                                <img src="https://cdn.simpleicons.org/openai" width="16" height="16">
-                                ChatGPT
-                            </li>
-                            <li>
-                                <img src="https://cdn.simpleicons.org/n8n" width="16" height="16">
-                                n8n
-                            </li>
-                            <li>
-                                <img src="https://cdn.simpleicons.org/make" width="16" height="16">
-                                Make
-                            </li>
-                            <li>
-                                <img src="https://cdn.simpleicons.org/zapier" width="16" height="16">
-                                Zapier
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <section class="section shell" id="services" aria-labelledby="services-title">
+            <div class="section-heading compact"><div><p class="eyebrow">Capabilities</p><h2 id="services-title">What I can help you ship</h2></div><p>From idea to production.</p></div>
+            <div class="services-grid">
+                <article class="service-card"><i class="fa-solid fa-code" aria-hidden="true"></i><h3>Full-stack .NET apps</h3><p>Maintainable enterprise web applications built with .NET, Blazor, React, and reliable data architecture.</p></article>
+                <article class="service-card"><i class="fa-solid fa-brain" aria-hidden="true"></i><h3>AI workflows &amp; agents</h3><p>Automation that connects AI conversations and decision logic to practical business processes.</p></article>
+                <article class="service-card"><i class="fa-solid fa-link" aria-hidden="true"></i><h3>API &amp; systems integration</h3><p>Secure integrations that keep platforms, payment services, logistics providers, and data in sync.</p></article>
             </div>
         </section>
 
-        <!-- Projects -->
-        <section id="projects" class="section">
-            <h2>Featured Projects</h2>
-
-            <div class="projects-carousel">
-                <button class="carousel-btn left" onclick="moveSlide(-1)">❮</button>
-                <div class="carousel-track">
-                    <!-- TenFreight -->
-                    <div class="project-card"
-                        data-title="TenFreight Portal"
-                        data-image="resources/images/project-image/TenFreight.png"
-                        data-description="Enterprise freight management system built using .NET, React, SQL Server, and API integrations. Handles quoting, carrier integration, consignment tracking, and billing automation."
-                        data-tech=".NET Core, React, SQL Server, REST API">
-
-                        <div class="project-header">
-                            <h3>TenFreight Portal</h3>
-                            <img src="resources/images/project-image/TenFreight.png" class="project-icon">
-                        </div>
-
-                        <img src="resources/images/project-image/TenFreight.png" class="project-image">
-                        <p>Freight management system built with .NET & React.</p>
-                    </div>  
-
-                    <!-- HR Solution -->
-                    <div class="project-card"
-                        data-title="HR Portal Solution"
-                        data-image="resources/images/project-image/Sharpsuite HR.png"
-                        data-description="Enterprise HR Portal system built using .NET, Blazor(MudBlazor), SQL Server, and API integrations."
-                        data-tech=".NET Core, Blazor, SQL Server, REST API">
-
-                        <div class="project-header">
-                            <h3>HR Portal Solution</h3>
-                            <img src="resources/images/project-image/Sharpsuite HR.png" class="project-icon">
-                        </div>
-
-                        <img src="resources/images/project-image/Sharpsuite HR.png" class="project-image">
-                        <p>HR Portal Solution system built with .NET & Blazor.</p>
-                    </div>
-
-                    <!-- Task Management -->
-                    <div class="project-card"
-                        data-title="Task Management"
-                        data-image="resources/images/project-image/Task_Management.png"
-                        data-description="Task Management system built using .NET, Blazor, SQL Server, and API integrations."
-                        data-tech=".NET Core, Blazor, SQL Server, REST API">
-
-                        <div class="project-header">
-                            <h3>Task Management</h3>
-                            <img src="resources/images/project-image/Task_Management.png" class="project-icon">
-                        </div>
-
-                        <img src="resources/images/project-image/Task_Management.png" class="project-image">
-                        <p>Task Management App system built with .NET & Blazor.</p>
-                    </div>
-
-                    <!-- Financing ERP -->
-                    <!--a href="#" target="_blank" class="project-card">
-                        <div class="project-header">
-                            <h3>Financing ERP</h3>
-                            <img src="resources/images/project-image/Financing_ERP.png" class="project-icon" alt="Sharpsuite HR">
-                        </div>
-
-                        <img src="resources/images/project-image/Financing_ERP.png" class="project-image" alt="Sharpsuite HR">
-                        <p>Financing ERP web application.</p>
-                    </a-->
-                    <div class="project-card"
-                        data-title="Financing ERP"
-                        data-image="resources/images/project-image/Financing_ERP.png"
-                        data-description="Financing ERP system built using C# .NET, ExtJs, SQL Server and Stored procedure."
-                        data-tech="C# ASP.NET, ExtJs, SQL Server and Stored procedure">
-
-                        <div class="project-header">
-                            <h3>Financing ERP</h3>
-                            <img src="resources/images/project-image/Financing_ERP.png" class="project-icon">
-                        </div>
-
-                        <img src="resources/images/project-image/Financing_ERP.png" class="project-image">
-                        <p>Financing ERP system built with C# .NET & ExtJs.</p>
-                    </div>
-
-                    <!-- SNDC Loan Application -->
-                    <!--a href="#" target="_blank" class="project-card">
-                        <div class="project-header">
-                            <h3>Loan Application</h3>
-                            <img src="resources/images/project-image/SNDCLoan.png" class="project-icon" alt="Sharpsuite HR">
-                        </div>
-
-                        <img src="resources/images/project-image/SNDCLoan.png" class="project-image" alt="Sharpsuite HR">
-                        <p>Desktop application project using C# and .Net Core.</p>
-                    </a-->
-                    <div class="project-card"
-                        data-title="Loan Application"
-                        data-image="resources/images/project-image/SNDCLoan.png"
-                        data-description="Loan Application system built using C# with SQL Server and Stored procedure."
-                        data-tech="C#, ADO.Net, SQL Server">
-
-                        <div class="project-header">
-                            <h3>Loan Application</h3>
-                            <img src="resources/images/project-image/SNDCLoan.png" class="project-icon">
-                        </div>
-
-                        <img src="resources/images/project-image/SNDCLoan.png" class="project-image">
-                        <p>Loan Application system built using C# with SQL Server and Stored procedure.</p>
-                    </div>    
-
-                    <!-- JCPO_SportsHub Application -->
-                    <!--a href="#" target="_blank" class="project-card">
-                        <div class="project-header">
-                            <h3>JCPO SportsHub Application</h3>
-                            <img src="resources/images/project-image/JCPO_SportsHub.png" class="project-icon" alt="Sharpsuite HR">
-                        </div>
-
-                        <img src="resources/images/project-image/JCPO_SportsHub.png" class="project-image" alt="Sharpsuite HR">
-                        <p>Desktop application project using C# and .Net Core.</p>
-                    </a-->
-                    <div class="project-card"
-                        data-title="JCPO SportsHub"
-                        data-image="resources/images/project-image/JCPO_SportsHub.png"
-                        data-description="JCPO SportsHub system built using C# with ASP.Net Core, Entity Framework Core, MySQL"
-                        data-tech="C# with .Net Core, Entity Framework Core, MySQL">
-
-                        <div class="project-header">
-                            <h3>JCPO SportsHub</h3>
-                            <img src="resources/images/project-image/JCPO_SportsHub.png" class="project-icon">
-                        </div>
-
-                        <img src="resources/images/project-image/JCPO_SportsHub.png" class="project-image">
-                        <p>JCPO SportsHub system built using C# with ASP.Net Core, Entity Framework Core, MySQL</p>
-                    </div>  
-
-                    <!-- AI Voice Call -->
-                    <div class="project-card"
-                        data-title="AI-Powered Outbound Calling Agent"
-                        data-image="resources/images/project-image/AI_Voice_Call.png"
-                        data-description="AI-powered voice calling solution built using Retell AI, n8n automation, and API integrations. The system automatically places outbound calls, interacts with customers using natural language conversations, collects information, confirms shipment details, and triggers backend workflows without human intervention."
-                        data-tech="Retell AI, n8n, REST API, Webhooks"
-                        data-video="https://www.youtube.com/watch?v=qAvnf1x5V0Q">
-
-                        <div class="project-header">
-                            <h3>AI Voice Call</h3>
-                            <img src="resources/images/project-image/AI_Voice_Call.png" class="project-icon">
-                        </div>
-
-                        <img src="resources/images/project-image/AI_Voice_Call.png" class="project-image">
-
-                        <!--p>
-                            Automated Customer Calling System using AI Voice Agent.
-                            <br><br>
-
-                            <a href="https://www.youtube.com/watch?v=qAvnf1x5V0Q"
-                            target="_blank"
-                            class="project-video-link"
-                            onclick="event.stopPropagation();">
-
-                            ▶ AI Voice Call Automation Demo
-                            </a>
-                        </p-->
-
-                        <p>Automated Customer Calling System using AI Voice Agent.</p>
-
-                        <a href="https://www.youtube.com/watch?v=qAvnf1x5V0Q"
-                        target="_blank"
-                        class="watch-demo-btn"
-                        onclick="event.stopPropagation();">
-
-                            <i class="fab fa-youtube"></i>
-                            Watch Demo
-                        </a>
-                    </div>
-
-                    <!-- Automation Workflow -->
-                    <div class="project-card"
-                        data-title="AI Customer Inquiry Automation Workflow"
-                        data-image="resources/images/project-image/AI Customer Enquiry Automation.png"
-                        data-description="AI Powered Customer Inquiry Automation Workflow"
-                        data-tech="n8n, Groq, Google Sheets, Gmail & Webhook Trigger"
-                        data-video="https://www.loom.com/share/274eb710a2d1429dbaa09366927c70a4">
-
-                        <div class="project-header">
-                            <h3>Automation Workflow</h3>
-                            <img src="resources/images/project-image/AI Customer Enquiry Automation.png" class="project-icon">
-                        </div>
-
-                        <img src="resources/images/project-image/AI Customer Enquiry Automation.png" class="project-image">
-
-                        <p>AI Customer Inquiry Automation Workflow</p>
-
-                        <a href="https://www.loom.com/share/274eb710a2d1429dbaa09366927c70a4"
-                        target="_blank"
-                        class="watch-demo-btn"
-                        onclick="event.stopPropagation();">
-
-                            <i class="fab fa-youtube"></i>
-                            Watch Demo
-                        </a>
-                    </div>
+        <section class="section shell split-section" id="experience" aria-labelledby="experience-title">
+            <div><p class="eyebrow">Experience</p><h2 id="experience-title">A career built around business software</h2>
+                <div class="timeline">
+                    <article><span>2024 — Present</span><h3>Full Stack Software Engineer</h3><p>Sharpsuite Corporate Solutions</p></article>
+                    <article><span>2023 — 2024</span><h3>Full Stack Software Engineer</h3><p>TritonTek</p></article>
+                    <article><span>2014 — 2023</span><h3>ERP Systems &amp; Data Support Specialist</h3><p>SkyGo Marketing Corporation</p></article>
+                    <article class="timeline-early"><span>2010 — 2014</span><h3>Developer &amp; Programmer roles</h3><p>MLhuillier Philippines, Rameses Systems, and Smartminds Systems</p></article>
                 </div>
-
-                <button class="carousel-btn right" onclick="moveSlide(1)">❯</button>
             </div>
+            <div class="about-panel" id="about"><p class="eyebrow">About me</p><h2>Technical depth with a business-first mindset.</h2><p>I’m Ronald Amancio, a full-stack engineer based in Cebu City, Philippines. I’ve spent more than 16 years turning operational requirements into dependable software across logistics, ERP, financing, HR, and customer engagement.</p><p>Today, I also design AI-assisted workflows that connect natural-language experiences to APIs, data, and backend processes.</p><div class="skill-cloud" aria-label="Core technologies"><span>C#</span><span>.NET 8</span><span>Blazor</span><span>React</span><span>SQL Server</span><span>REST APIs</span><span>Azure</span><span>n8n</span></div><button class="text-button" id="openTechStack" type="button">View complete tech stack <span aria-hidden="true">→</span></button></div>
         </section>
 
-        <!-- Experience Timeline -->
-        <!--section id="experience" class="section collapsible">
-            <h2>Experience</h2>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Full Stack Developer</h3>
-                    <span>2023 - Present</span>
-                    <p>Developing enterprise web systems using .NET & Blazor.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>Software Developer</h3>
-                    <span>2021 - 2023</span>
-                    <p>Built internal tools and database systems.</p>
-                </div>
-            </div>
-        </section-->
-
-        <!-- Contact Section -->
-        <!--section id="contact" class="section collapsible">
-            <h2>Hire Me</h2>
-
-            <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section-->
-
-        <!-- Social -->
-        <section class="social-section">
-            <div class="container">
-                <!-- FACEBOOK -->
-                <!--div class="card" data-url="https://www.facebook.com">
-                    <div class="face face1">
-                        <div class="content">
-                            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Logo">
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <h3>Facebook</h3>
-                        <p>Follow my updates and connect socially.</p>
-                    </div>
-                </div-->
-
-                <!--div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="ronaldamancio" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ph.linkedin.com/in/ronaldamancio?trk=profile-badge">Ronald Amancio</a></div-->
-                <!--script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script-->
-              
-
-                <!-- LINKEDIN -->
-                <div class="card" data-url="https://www.linkedin.com/in/ronald-amancio-41404570/">
-                    <div class="face face1">
-                        <div class="content">
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <h3>LinkedIn</h3>
-                        <p>Explore my professional experience and skills.</p>
-                    </div>
-                </div>
-
-                <!-- UPWORK -->
-                <div class="card" data-url="https://www.upwork.com/freelancers/~01644555218b50748f">
-                    <div class="face face1">
-                        <div class="content">
-                            <img src="https://cdn.simpleicons.org/upwork/14a800" alt="Upwork Logo">
-                        </div>
-                    </div>
-
-                    <div class="face face2">
-                        <h3>Upwork</h3>
-                        <p>Hire me on Upwork for freelance and contract projects.</p>
-                    </div>
-                </div>
-
-                <!-- GITHUB -->
-                <div class="card" data-url="https://github.com/ronald-amancio">
-                    <div class="face face1">
-                        <div class="content">
-                            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Logo">
-                        </div>
-                    </div>
-                    <div class="face face2">
-                        <h3>GitHub</h3>
-                        <p>View my projects and source code repositories.</p>
-                    </div>
-                </div>
-            </div>
+        <section class="contact-banner shell" aria-labelledby="contact-title">
+            <div><p class="eyebrow">Let’s build together</p><h2 id="contact-title">Have a project or opportunity in mind?</h2><p>I’m available for remote roles, contract work, and thoughtful collaborations.</p></div>
+            <div class="contact-actions"><a class="button button-primary" href="https://calendly.com/ronsynt/new-meeting" target="_blank" rel="noopener"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Book a call</a><a class="email-link" href="mailto:ronsynt@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i> ronsynt@gmail.com</a></div>
         </section>
+    </main>
 
-        <footer>
-            © 2026 Ronald Amancio
-        </footer>
+    <footer class="footer shell">
+        <div><a class="brand" href="#top" aria-label="Back to top">R<span>A</span></a><p>Ronald Amancio<br><span>Full Stack .NET Engineer &amp; AI Automation Specialist</span></p></div>
+        <div class="social-links" aria-label="Social profiles"><a href="https://www.linkedin.com/in/ronald-amancio-41404570/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="https://www.upwork.com/freelancers/~01644555218b50748f" target="_blank" rel="noopener" aria-label="Upwork"><i class="fa-brands fa-upwork"></i></a><a href="https://github.com/ronald-amancio" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></div>
+        <p class="copyright">© <span id="currentYear"></span> Ronald Amancio. Built with HTML, CSS &amp; JavaScript.</p>
+    </footer>
 
-        <!-- Script ONLY here -->
-        <script src="src/js/script.js"></script>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
 
-        <button id="backToTop" class="back-to-top">↑</button>
+    <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" hidden>
+        <div class="modal-backdrop" data-close-modal></div><div class="modal-card project-modal-card"><button class="modal-close" type="button" data-close-modal aria-label="Close project details">×</button><img id="projectModalImage" src="resources/images/project-image/TenFreight.png" alt=""><span class="project-label">Project details</span><h2 id="projectModalTitle"></h2><p id="projectModalDescription"></p><div class="tech-tags" id="projectModalTech"></div><a class="button button-primary" id="projectModalLink" href="https://www.youtube.com/watch?v=qAvnf1x5V0Q" target="_blank" rel="noopener" hidden>View demo</a></div>
+    </div>
 
-        <!-- Project Modal -->
-        <div class="project-modal" id="projectModal">
-            <div class="modal-content">
-                <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="modal" id="techModal" role="dialog" aria-modal="true" aria-labelledby="techModalTitle" hidden>
+        <div class="modal-backdrop" data-close-tech></div><div class="modal-card tech-modal-card"><button class="modal-close" type="button" data-close-tech aria-label="Close tech stack">×</button><p class="eyebrow">Technical toolkit</p><h2 id="techModalTitle">Tech stack &amp; technologies</h2><div class="tech-groups"><article><h3>Backend</h3><p>C#, .NET 4.7–8+, ASP.NET Core, MVC, Web API, Entity Framework Core, ADO.NET, PHP, Java</p></article><article><h3>Frontend</h3><p>Blazor, React, ExtJS, HTML5, CSS3, JavaScript, jQuery, Bootstrap, MudBlazor</p></article><article><h3>Data &amp; reporting</h3><p>SQL Server, Azure SQL, MySQL, PostgreSQL, T-SQL, SSRS, Crystal Reports, Jasper Reports</p></article><article><h3>AI &amp; automation</h3><p>n8n, Make, Zapier, Retell AI, GPT integrations, prompt engineering, voice automation, webhooks</p></article><article><h3>Architecture &amp; delivery</h3><p>Clean Architecture, SOLID, Repository Pattern, dependency injection, GitHub Actions, CI/CD, Azure</p></article><article><h3>Testing &amp; tools</h3><p>xUnit, Moq, integration testing, Postman, Swagger, Visual Studio, VS Code, Git</p></article></div></div>
+    </div>
 
-                <h2 id="modalTitle"></h2>
+    <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" hidden>
+        <div class="modal-backdrop" data-close-contact></div><div class="modal-card contact-modal-card"><button class="modal-close" type="button" data-close-contact aria-label="Close contact form">×</button><p class="eyebrow">Let’s connect</p><h2 id="contactModalTitle">Tell me what you’re building.</h2><p>You can also <a href="https://calendly.com/ronsynt/new-meeting" target="_blank" rel="noopener">schedule a meeting</a>.</p><form action="https://formsubmit.co/ronsynt@gmail.com" method="POST" id="contactForm"><input type="hidden" name="_subject" value="New Portfolio Contact Message"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_autoresponse" value="Thank you for reaching out! I’ve received your message and will respond within 24–48 hours."><input type="hidden" name="_next" value="https://ronald-amancio.github.io/PortFolio/thankyou.html"><input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off"><label for="contactName">Full name</label><input type="text" id="contactName" name="name" autocomplete="name" required><label for="contactEmail">Email address</label><input type="email" id="contactEmail" name="email" autocomplete="email" required><label for="contactCompany">Company <span>(optional)</span></label><input type="text" id="contactCompany" name="company" autocomplete="organization"><label for="contactMessage">Project or opportunity</label><textarea id="contactMessage" name="message" rows="5" minlength="10" required></textarea><button class="button button-primary button-wide" type="submit">Send message <span aria-hidden="true">→</span></button></form></div>
+    </div>
 
-                <img id="modalImage" class="modal-image">
-
-                <!--p id="modalDescription"></p-->
-                <p id="modalDescription" class="modal-description"></p>
-                <span id="toggleDescription" class="read-more-btn"></span>
-
-                <div class="modal-tech" id="modalTech"></div>
-
-                <a href="#" target="_blank" id="modalLink" class="modal-btn">View Project</a>
-            </div>
-        </div>
-
-        <!-- Tech Stack Modal -->
-        <div class="tech-modal" id="techModal">
-            <div class="tech-modal-content">
-                <span class="close-modal" onclick="closeTechStackModal()">&times;</span>
-
-                <h2>💻 Tech Stack & Technologies</h2>
-
-                <hr>
-
-                <!-- FRONTEND -->
-                <h3>🎨 Frontend Technologies</h3>
-                <ul>
-                    <li>🧩 Blazor Server / Blazor WebAssembly</li>
-                    <li>🎨 MudBlazor, Bootstrap 5</li>
-                    <li>🌐 HTML5, CSS3, JavaScript</li>
-                    <li>⚡ jQuery, Ajax, ExtJS</li>
-                    <li> ⚛ React</li>
-                </ul>
-
-                <!-- BACKEND -->
-                <h3>⚙ Backend Development</h3>
-                <ul>
-                    <li>🚀 ASP.NET Core Web API (.NET 6 / .NET 8)</li>
-                    <li>🧠 ASP.NET MVC / Web Forms</li>
-                    <li>🔧 C#, VB.NET, PHP, Java</li>
-                    <li>🔗 REST API & Third-Party API Integration</li>
-                    <li>🔐 JWT Authentication & Session Handling</li>
-                </ul>
-
-                <!-- DATABASE -->
-                <h3>🗄 Database & ORM</h3>
-                <ul>
-                    <li>📦 Microsoft SQL Server (MSSQL)</li>
-                    <li>🐬 MySQL</li>
-                    <li>🐘 PostgreSQL</li>
-                    <li>⚡ Entity Framework Core</li>
-                    <li>🧾 Stored Procedures & T-SQL</li>
-                </ul>
-
-                <!-- WORDPRESS / CRM / AI -->
-                <h3>🤖 CRM, WordPress & AI Integration</h3>
-                <ul>
-                    <li>🌐 WordPress CMS Development</li>
-                    <li>🧩 Custom WordPress Plugin Development</li>
-                    <li>📈 CRM Integration</li>
-                    <li>🤖 AI Chatbot Plugin Development</li>
-                    <li>🤖 AI Voice Automation</li>
-                    <li>⚡ Webhook & Third-Party API Integration</li>
-                    <li>🔄 Real-Time API Communication</li>
-                </ul>
-
-                <!-- DEV TOOLS -->
-                <h3>🛠 Dev Tools & Practices</h3>
-                <ul>
-                    <li>🧪 xUnit, Moq, Integration Testing</li>
-                    <li>✅ Git, GitHub, GitHub Actions</li>
-                    <li>🚀 CI/CD Deployment Pipelines</li>
-                    <li>🧰 Visual Studio, VS Code</li>
-                    <li>📬 Postman & Swagger</li>
-                    <li>🧠 Agile Methodology (Scrum)</li>
-                </ul>
-
-                <!-- CLOUD -->
-                <h3>☁ Cloud & Hosting</h3>
-                <ul>
-                    <li> ☁ Microsoft Azure</li>
-                    <li>🐳 Docker & Containerization</li>
-                    <li>🌐 Plesk Hosting</li>
-                    <li>🔒 HTTPS & Secure Deployment</li>
-                </ul>
-
-                <!-- OTHER -->
-                <h3>📦 Other Technologies</h3>
-                <ul>
-                    <li>📊 Crystal Reports, SSRS, Jasper Reports</li>
-                    <li>🖥 Desktop Application Development (WinForms)</li>
-                    <li>📁 GitHub Projects, Asana, ClickUp</li>
-                    <li>🏗 SaaS & Enterprise System Architecture</li>
-                </ul>
-
-                <!-- Automation Tools -->
-                <h3>📦 Automation Tools</h3>
-                <ul>
-                    <li> n8n</li>
-                    <li> zapier</li>
-                    <li> Make</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- CONTACT MODAL -->
-        <div class="contact-modal" id="contactModal">
-            <div class="contact-modal-content">
-                <span class="close-modal" onclick="closeContactModal()">&times;</span>
-
-                <h2>Let’s Connect | 
-                        <a href="https://calendly.com/ronsynt/new-meeting" target="_blank">
-                            <!--button type="button" class="schedule-btn">Schedule with me a Meeting</button-->
-                            <span class="schedule-btn">Schedule with me a Meeting</span>
-                        </a>
-                </h2>
-                <p class="contact-subtitle">
-                    I’m open to freelance projects, collaborations, and full-time opportunities.
-                </p>
-
-                <form action="https://formsubmit.co/ronsynt@gmail.com" method="POST">
-
-                    <!-- FormSubmit Settings -->
-                    <input type="hidden" name="_subject" value="New Portfolio Contact Message">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_autoresponse" value="Thank you for reaching out! I’ve received your message and will respond within 24–48 hours.">
-                    <input type="hidden" name="_next" value="https://ronald-amancio.github.io/PortFolio/thankyou.html">
-
-                    <!-- Honeypot (Anti-spam) -->
-                    <input type="text" name="_honey" style="display:none">
-
-                    <input type="text" id="contactName" name="name" placeholder="Full Name" required>
-                    <small class="error-message" id="nameError"></small>
-
-                    <input type="email" id="contactEmail" name="email" placeholder="Email Address" required>
-                    <small class="error-message" id="emailError"></small>
-
-                    <input type="text" name="company" placeholder="Company (Optional)">
-
-                    <textarea id="contactMessage" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
-                    <small class="error-message" id="messageError"></small>
-
-                    <!--div class="schedule-meeting">
-                        <a href="https://calendly.com/ronsynt/new-meeting" target="_blank">
-                            <span class="schedule-btn">Schedule with me a Meeting</span>
-                        </a>
-                    </div-->
-
-                    <button type="submit" class="contact-submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </body>
+    <script src="src/js/script.js"></script>
+</body>
 </html>

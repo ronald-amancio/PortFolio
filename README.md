@@ -5,7 +5,7 @@ Welcome to my personal portfolio website repository.
 This project showcases my experience, technical skills, and selected projects as a Full Stack .NET Developer.
 
 🔗 **Live Website:**  
-https://ronald-amancio.github.io/portfolio-website/
+https://ronald-amancio.github.io/PortFolio/
 
 ---
 
@@ -19,16 +19,15 @@ This website was built to:
 - Provide direct contact access
 - Offer downloadable CV
 
-It is fully responsive and includes modern UI features such as:
+It is fully responsive and includes:
 
-- 🌙 Dark / Light mode toggle
-- 📱 Responsive design (mobile & tablet ready)
-- 📊 Animated skills progress bars
-- 🗂 Collapsible project & experience sections
-- 🖼 Dynamic avatar display on scroll
-- ⬆ Back-to-top button
+- 📱 Mobile-first, recruiter-friendly presentation
+- 🗂 Filterable project gallery with expandable project coverage
+- 🖼 Accessible project detail dialogs and demo links
+- 💼 Verified professional experience and technical capabilities
+- ⬆ Smooth navigation and back-to-top control
 - 📄 Direct CV download
-- 🎯 Smooth scroll navigation
+- 📅 Contact form and meeting scheduling
 
 ---
 
@@ -47,3 +46,14 @@ No frameworks were used — built from scratch for performance and control.
 
 ## 📂 Project Structure
 
+```text
+PortFolio/
+├── index.html
+├── thankyou.html
+├── src/
+│   ├── css/style.css
+│   └── js/script.js
+└── resources/
+    ├── files/
+    └── images/
+```
