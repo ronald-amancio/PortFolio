@@ -134,8 +134,8 @@ img { display: block; max-width: 100%; height: auto; }
 .project-grid.filtering .additional-project { display: block; }
 
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.service-card { padding: 28px; border: 1px solid var(--line); border-radius: 17px; background: linear-gradient(145deg, rgba(22, 55, 73, .78), rgba(8, 28, 40, .65)); }
-.service-card i { color: var(--cyan); font-size: 27px; }
+.service-card { position: relative; padding: 28px; border: 1px solid var(--line); border-radius: 17px; background: linear-gradient(145deg, rgba(22, 55, 73, .78), rgba(8, 28, 40, .65)); box-shadow: 0 14px 34px rgba(0, 0, 0, .08); transition: transform .32s cubic-bezier(.2, .8, .2, 1), border-color .32s, background .32s, box-shadow .32s; }
+.service-card i { color: var(--cyan); font-size: 27px; transition: color .32s, filter .32s, transform .32s; }
 .service-card h3 { margin: 20px 0 8px; font-size: 21px; line-height: 1.2; }
 .service-card p { margin: 0; color: var(--muted); font-size: 14px; }
 
@@ -189,9 +189,33 @@ img { display: block; max-width: 100%; height: auto; }
 .tech-modal-card { color: var(--text); border: 1px solid var(--line); background: var(--navy-850); }
 .tech-modal-card .modal-close { color: var(--text); background: var(--navy-800); }
 .tech-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
-.tech-groups article { padding: 19px; border: 1px solid var(--line); border-radius: 13px; background: var(--card); }
+.tech-groups article { position: relative; padding: 19px; border: 1px solid var(--line); border-radius: 13px; background: var(--card); box-shadow: 0 10px 24px rgba(0, 0, 0, .08); transition: transform .3s cubic-bezier(.2, .8, .2, 1), border-color .3s, background .3s, box-shadow .3s; }
 .tech-groups h3 { margin: 0 0 8px; color: var(--cyan); font-size: 16px; }
 .tech-groups p { margin: 0; color: var(--muted); font-size: 13px; }
+
+@media (hover: hover) and (pointer: fine) {
+    .service-card:hover {
+        z-index: 2;
+        border-color: rgba(33, 231, 223, .72);
+        background:
+            radial-gradient(circle at 12% 8%, rgba(33, 231, 223, .25), transparent 42%),
+            radial-gradient(circle at 92% 90%, rgba(255, 112, 93, .22), transparent 46%),
+            linear-gradient(135deg, rgba(18, 57, 75, .96), rgba(9, 29, 43, .94));
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .3), 0 0 30px rgba(33, 231, 223, .18), 0 0 48px rgba(255, 112, 93, .1);
+        transform: translateY(-7px) scale(1.025);
+    }
+    .service-card:hover i { color: #78fff9; filter: drop-shadow(0 0 9px rgba(33, 231, 223, .75)); transform: scale(1.1); }
+    .tech-groups article:hover {
+        z-index: 2;
+        border-color: rgba(33, 231, 223, .7);
+        background:
+            radial-gradient(circle at 8% 0%, rgba(33, 231, 223, .2), transparent 46%),
+            radial-gradient(circle at 100% 100%, rgba(255, 112, 93, .18), transparent 48%),
+            linear-gradient(140deg, rgba(18, 58, 76, .98), rgba(10, 31, 45, .98));
+        box-shadow: 0 18px 38px rgba(0, 0, 0, .32), 0 0 24px rgba(33, 231, 223, .16), 0 0 34px rgba(255, 112, 93, .08);
+        transform: translateY(-5px) scale(1.025);
+    }
+}
 .contact-modal-card > p { color: #52646e; }
 .contact-modal-card a { color: #c44737; font-weight: 750; }
 .contact-modal-card form { display: grid; margin-top: 25px; }
