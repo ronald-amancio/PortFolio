@@ -83,7 +83,7 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 .hero-portrait { position: relative; align-self: stretch; display: flex; align-items: flex-end; justify-content: center; min-height: 500px; isolation: isolate; }
 .hero-portrait::after { content: ""; position: absolute; right: 0; bottom: 1%; left: 0; height: 24%; z-index: 2; background: linear-gradient(transparent, var(--navy-900) 78%); }
-.hero-portrait img { position: relative; z-index: 1; width: min(460px, 96%); aspect-ratio: 1 / 1.08; object-fit: cover; object-position: 50% 28%; border-radius: 48% 48% 22px 22px; filter: saturate(.94) contrast(1.04); }
+.hero-portrait img { position: relative; z-index: 1; width: min(460px, 96%); aspect-ratio: 1 / 1.08; object-fit: cover; object-position: 50% 28%; border-radius: 0; filter: saturate(.94) contrast(1.04); }
 .portrait-glow { position: absolute; width: 82%; aspect-ratio: 1; z-index: 0; bottom: 12%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 112, 93, .34), rgba(33, 231, 223, .08) 48%, transparent 70%); filter: blur(18px); }
 
 .proof { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -228,7 +228,7 @@ img { display: block; max-width: 100%; height: auto; }
     .hero { min-height: auto; grid-template-columns: 1fr; padding-top: 42px; padding-bottom: 16px; }
     .hero-copy { order: 1; }
     .hero-portrait { order: 0; min-height: 270px; align-items: center; }
-    .hero-portrait img { width: 245px; aspect-ratio: 1; border-radius: 50%; object-position: 50% 30%; }
+    .hero-portrait img { width: 245px; aspect-ratio: 1; border-radius: 0; object-position: 50% 30%; }
     .hero-portrait::after { height: 18%; }
     .portrait-glow { width: 270px; bottom: 2%; }
     .availability { font-size: 11px; }
