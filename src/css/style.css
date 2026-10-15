@@ -52,8 +52,10 @@ img { display: block; max-width: 100%; height: auto; }
 
 .site-header { position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--line); background: rgba(4, 16, 25, .82); backdrop-filter: blur(18px); }
 .navbar { width: min(var(--max-width), calc(100% - 40px)); min-height: 72px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-.brand { display: inline-flex; align-items: center; text-decoration: none; font-size: 29px; line-height: 1; font-weight: 900; letter-spacing: -.09em; }
-.brand span { color: var(--coral); }
+.nav-profile { display: block; flex: 0 0 44px; width: 44px; height: 44px; overflow: hidden; border: 2px solid rgba(255, 255, 255, .38); border-radius: 50%; opacity: 0; visibility: hidden; transform: translateY(-7px); pointer-events: none; transition: opacity .25s, visibility .25s, transform .25s, border-color .2s; }
+.nav-profile img { width: 100%; height: 100%; object-fit: cover; }
+.site-header.scrolled .nav-profile { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+.site-header.scrolled .nav-profile:hover { border-color: var(--cyan); }
 .nav-links { display: flex; align-items: center; gap: clamp(20px, 3vw, 42px); }
 .nav-links > a { color: #dbe6ec; font-size: 14px; font-weight: 650; text-decoration: none; transition: color .2s; }
 .nav-links > a:hover, .nav-links > a:focus-visible { color: var(--cyan); }
@@ -83,7 +85,6 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-portrait::after { content: ""; position: absolute; right: 0; bottom: 1%; left: 0; height: 24%; z-index: 2; background: linear-gradient(transparent, var(--navy-900) 78%); }
 .hero-portrait img { position: relative; z-index: 1; width: min(460px, 96%); aspect-ratio: 1 / 1.08; object-fit: cover; object-position: 50% 28%; border-radius: 48% 48% 22px 22px; filter: saturate(.94) contrast(1.04); }
 .portrait-glow { position: absolute; width: 82%; aspect-ratio: 1; z-index: 0; bottom: 12%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 112, 93, .34), rgba(33, 231, 223, .08) 48%, transparent 70%); filter: blur(18px); }
-.portrait-signature { position: absolute; right: 0; bottom: 23%; z-index: 3; margin: 0; color: white; font-family: Georgia, serif; font-size: 21px; font-style: italic; line-height: .92; transform: rotate(-7deg); }
 
 .proof { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .proof-item { display: flex; align-items: center; gap: 16px; padding: 8px 28px; border-right: 1px solid var(--line); }
@@ -162,6 +163,9 @@ img { display: block; max-width: 100%; height: auto; }
 
 .footer { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding-block: 28px; border-top: 1px solid var(--line); }
 .footer > div:first-child { display: flex; align-items: center; gap: 16px; }
+.footer-profile { display: block; flex: 0 0 54px; width: 54px; height: 54px; overflow: hidden; border: 2px solid rgba(255, 255, 255, .3); border-radius: 50%; transition: border-color .2s, transform .2s; }
+.footer-profile:hover { border-color: var(--cyan); transform: translateY(-2px); }
+.footer-profile img { width: 100%; height: 100%; object-fit: cover; }
 .footer p { margin: 0; font-size: 13px; font-weight: 750; line-height: 1.45; }
 .footer p span, .copyright { color: var(--muted); font-size: 11px !important; font-weight: 500 !important; }
 .social-links { display: flex; gap: 9px; }
@@ -227,7 +231,6 @@ img { display: block; max-width: 100%; height: auto; }
     .hero-portrait img { width: 245px; aspect-ratio: 1; border-radius: 50%; object-position: 50% 30%; }
     .hero-portrait::after { height: 18%; }
     .portrait-glow { width: 270px; bottom: 2%; }
-    .portrait-signature { right: 12%; bottom: 14%; font-size: 17px; }
     .availability { font-size: 11px; }
     .hero h1 { font-size: clamp(39px, 12vw, 56px); }
     .hero-intro { font-size: 16px; }
@@ -263,7 +266,6 @@ img { display: block; max-width: 100%; height: auto; }
 @media (max-width: 410px) {
     .hero-portrait { min-height: 235px; }
     .hero-portrait img { width: 215px; }
-    .portrait-signature { right: 7%; }
     .hero h1 { font-size: 42px; }
     .project-card-copy { min-height: 86px; }
     .project-card-copy div > span { font-size: 10px; }

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const navToggle = document.querySelector(".nav-toggle");
     const navLinks = document.getElementById("navLinks");
+    const siteHeader = document.querySelector(".site-header");
     const backToTop = document.getElementById("backToTop");
     const projectGrid = document.getElementById("projectGrid");
     const showAllProjects = document.getElementById("showAllProjects");
@@ -31,8 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("scroll", () => {
+        siteHeader.classList.toggle("scrolled", window.scrollY > 80);
         backToTop.classList.toggle("visible", window.scrollY > 700);
     }, { passive: true });
+
+    siteHeader.classList.toggle("scrolled", window.scrollY > 80);
 
     backToTop.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
