@@ -156,6 +156,118 @@ document.addEventListener("DOMContentLoaded", () => {
                 description: "Organises practical articles on surcharges, volumetric weight, dangerous goods, wait times, fuel levies, and freight charges.",
                 purpose: "Help customers understand common logistics costs and rules while reducing repetitive support questions."
             }
+        ],
+        tenfreightV2: [
+            {
+                image: "resources/images/project-image/tenfreight-v2/portal-home.jpg",
+                title: "Freight portal homepage",
+                description: "Introduces the customer portal as a single workspace for quoting, booking, monitoring, and managing Australian freight.",
+                purpose: "Give visitors immediate confidence in the platform and direct them toward tracking, support, sign-in, or account creation."
+            },
+            {
+                image: "resources/images/project-image/tenfreight-v2/instant-quote.jpg",
+                title: "Guided shipment quote",
+                description: "Starts a four-step booking journey with route details, handling methods, freight items, and an at-a-glance shipment summary.",
+                purpose: "Turn a complex freight request into a clear, validated workflow before carrier pricing is requested."
+            },
+            {
+                image: "resources/images/project-image/tenfreight-v2/quote-request.jpg",
+                title: "Standard quote request",
+                description: "Captures pickup and delivery suburbs, loading requirements, item dimensions, weight, volume, quantity, and dangerous-goods status.",
+                purpose: "Collect the operational details needed to compare suitable carrier services and produce dependable freight estimates."
+            },
+            {
+                image: "resources/images/project-image/tenfreight-v2/shipment-tracking.jpg",
+                title: "Public shipment tracking",
+                description: "Lets customers check a consignment using its reference number or scan the QR code supplied on a booking receipt.",
+                purpose: "Provide fast shipment visibility without requiring an account or a call to the operations team."
+            },
+            {
+                image: "resources/images/project-image/tenfreight-v2/customer-support.jpg",
+                title: "Customer support request",
+                description: "Collects contact information, support category, consignment reference, subject, and a detailed customer message in one secure form.",
+                purpose: "Route each enquiry to the support team with enough context to investigate and respond efficiently."
+            },
+            {
+                image: "resources/images/project-image/tenfreight-v2/secure-sign-in.jpg",
+                title: "Secure portal sign-in",
+                description: "Provides a focused entry point for customers and staff, with password recovery, account creation, and terms access close at hand.",
+                purpose: "Protect account-specific freight data while keeping the most common access actions easy to find."
+            },
+            {
+                image: "resources/images/project-image/tenfreight-v2/account-registration.jpg",
+                title: "Customer account registration",
+                description: "Registers a shipper with personal, company, address, suburb, phone, email, password, and terms-confirmation details.",
+                purpose: "Create a structured customer profile that can support personalized quotes, bookings, records, and ongoing service."
+            },
+            {
+                image: "resources/images/project-image/tenfreight-v2/password-recovery.jpg",
+                title: "Password recovery",
+                description: "Combines email verification, a time-sensitive verification code, and new-password confirmation in one recovery flow.",
+                purpose: "Help authorized users restore portal access without exposing credentials or relying on manual support intervention."
+            }
+        ],
+        celestialMeadows: [
+            {
+                image: "resources/images/project-image/celestial-meadows/hr-dashboard.jpg",
+                title: "HR operations dashboard",
+                description: "Brings attendance, leave activity, workforce totals, pending actions, trends, and company updates into one operational view.",
+                purpose: "Give HR leaders a fast daily overview and clear paths into the workflows that need attention."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/employee-management.jpg",
+                title: "Staff management",
+                description: "Provides a searchable employee and administrator directory with department, role, status, and account-level quick actions.",
+                purpose: "Centralize workforce records and make routine employee administration faster and easier to audit."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/benefits-management.jpg",
+                title: "Benefits management",
+                description: "Organizes benefit plans, employee enrollments, claims, providers, dependents, contributions, and recent requests.",
+                purpose: "Replace fragmented benefit tracking with one structured workflow for administrators and employees."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/government-compliance.jpg",
+                title: "Government compliance",
+                description: "Tracks statutory obligations, remittances, employee and employer contributions, filing readiness, and upcoming deadlines.",
+                purpose: "Help payroll teams prepare filings accurately and see compliance risks before deadlines are missed."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/user-administration.jpg",
+                title: "User administration",
+                description: "Manages portal accounts, verification, activation, category, department, lockout status, and recent access information.",
+                purpose: "Give authorized administrators clear control over account lifecycle and platform security."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/branches-devices.jpg",
+                title: "Branches and devices",
+                description: "Maintains company workplaces, branch details, registered devices, assignments, and location-aware attendance settings.",
+                purpose: "Connect access and attendance rules to approved offices and trusted workplace devices."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/company-setup.jpg",
+                title: "Company setup and branding",
+                description: "Configures company identity, portal branding, business details, and the visual experience used across the platform.",
+                purpose: "Let each organization manage a consistent portal identity without changing application code."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/help-support.jpg",
+                title: "Help and support",
+                description: "Combines a searchable user manual with a private support-ticket queue, attachments, status tracking, and replies.",
+                purpose: "Give employees a dependable self-service path while keeping unresolved issues visible to support teams."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/memorial-real-estate.jpg",
+                title: "Memorial real-estate workspace",
+                description: "Groups sales contracts, collections, commissions, customer inquiries, operational processes, and management reports.",
+                purpose: "Bring the company's specialized property operations into the same secure enterprise platform."
+            },
+            {
+                image: "resources/images/project-image/celestial-meadows/feature-catalog.jpg",
+                title: "Feature catalog",
+                description: "Organizes platform modules and company entitlements so administrators can understand which capabilities are available.",
+                purpose: "Support a modular rollout where features can be governed as the organization and product plan evolve."
+            }
         ]
     };
     let activeProjectGallery = [];
