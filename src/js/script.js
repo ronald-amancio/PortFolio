@@ -88,8 +88,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectModalImage = document.getElementById("projectModalImage");
     const projectModalTitle = document.getElementById("projectModalTitle");
     const projectModalDescription = document.getElementById("projectModalDescription");
+    const projectDetailSections = document.getElementById("projectDetailSections");
+    const projectModalFeatures = document.getElementById("projectModalFeatures");
+    const projectModalResponsibilities = document.getElementById("projectModalResponsibilities");
     const projectModalTech = document.getElementById("projectModalTech");
     const projectModalLink = document.getElementById("projectModalLink");
+
+    const populateProjectList = (list, values) => {
+        list.replaceChildren();
+        values.forEach((value) => {
+            const item = document.createElement("li");
+            item.textContent = value.trim();
+            list.appendChild(item);
+        });
+    };
 
     document.querySelectorAll(".project-hit-area").forEach((trigger) => {
         trigger.addEventListener("click", () => {
@@ -98,6 +110,12 @@ document.addEventListener("DOMContentLoaded", () => {
             projectModalImage.src = trigger.dataset.image;
             projectModalImage.alt = `${trigger.dataset.title} project screenshot`;
             projectModalTech.replaceChildren();
+
+            const features = trigger.dataset.features?.split("|").filter(Boolean) || [];
+            const responsibilities = trigger.dataset.responsibilities?.split("|").filter(Boolean) || [];
+            populateProjectList(projectModalFeatures, features);
+            populateProjectList(projectModalResponsibilities, responsibilities);
+            projectDetailSections.hidden = features.length === 0 && responsibilities.length === 0;
 
             trigger.dataset.tech.split(",").forEach((technology) => {
                 const tag = document.createElement("span");
