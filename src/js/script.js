@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const closeModal = (modal) => {
         modal.hidden = true;
+        if (modal.id === "projectModal") stopProjectGalleryAutoplay();
         body.classList.remove("modal-open");
         if (lastFocusedElement) lastFocusedElement.focus();
     };
@@ -159,6 +160,21 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     let activeProjectGallery = [];
     let activeGalleryIndex = 0;
+    let projectGalleryAutoplayTimer = null;
+
+    const stopProjectGalleryAutoplay = () => {
+        window.clearTimeout(projectGalleryAutoplayTimer);
+        projectGalleryAutoplayTimer = null;
+    };
+
+    const scheduleProjectGalleryAutoplay = () => {
+        stopProjectGalleryAutoplay();
+        if (activeProjectGallery.length < 2 || projectModal.hidden || document.hidden) return;
+        projectGalleryAutoplayTimer = window.setTimeout(() => {
+            showAdjacentGallerySlide(1, false);
+            scheduleProjectGalleryAutoplay();
+        }, 5000);
+    };
 
     const renderProjectGallery = () => {
         const slide = activeProjectGallery[activeGalleryIndex];
@@ -198,15 +214,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 activeGalleryIndex = index;
                 renderProjectGallery();
                 projectModal.querySelector(".modal-card").scrollTop = 0;
+                scheduleProjectGalleryAutoplay();
             });
             projectGalleryThumbnails.appendChild(thumbnail);
         });
     };
 
-    const showAdjacentGallerySlide = (direction) => {
+    const showAdjacentGallerySlide = (direction, restartAutoplay = true) => {
         activeGalleryIndex = (activeGalleryIndex + direction + activeProjectGallery.length) % activeProjectGallery.length;
         renderProjectGallery();
         projectModal.querySelector(".modal-card").scrollTop = 0;
+        if (restartAutoplay) scheduleProjectGalleryAutoplay();
     };
 
     projectGalleryPrevious.addEventListener("click", () => showAdjacentGallerySlide(-1));
@@ -260,7 +278,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             openModal(projectModal, trigger);
+            scheduleProjectGalleryAutoplay();
         });
+    });
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) stopProjectGalleryAutoplay();
+        else if (!projectModal.hidden) scheduleProjectGalleryAutoplay();
     });
 
     projectModal.querySelectorAll("[data-close-modal]").forEach((trigger) => {

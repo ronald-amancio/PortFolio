@@ -196,7 +196,7 @@ img { display: block; max-width: 100%; height: auto; }
 .project-gallery-main:disabled { cursor: default; }
 .project-gallery-main img { width: 100%; height: min(390px, 48vh); object-fit: cover; object-position: top; }
 .project-gallery-main:focus-visible, .project-gallery-thumbnail:focus-visible, .project-gallery-nav:focus-visible { outline: 3px solid var(--cyan); outline-offset: -4px; }
-.project-gallery-nav { position: absolute; top: 50%; min-height: 40px; padding: 9px 12px; color: var(--text); border: 1px solid rgba(255, 255, 255, .5); border-radius: 999px; background: rgba(4, 16, 25, .82); font-size: 13px; font-weight: 800; cursor: pointer; transform: translateY(-50%); }
+.project-gallery-nav { position: absolute; top: 50%; display: grid; width: 44px; height: 44px; min-height: 44px; padding: 0; place-items: center; color: var(--text); border: 1px solid rgba(255, 255, 255, .5); border-radius: 50%; background: rgba(4, 16, 25, .82); font-size: 28px; font-weight: 700; line-height: 1; cursor: pointer; transform: translateY(-50%); }
 .project-gallery-nav.previous { left: 12px; }
 .project-gallery-nav.next { right: 12px; }
 .project-gallery-counter { position: absolute; right: 12px; bottom: 10px; padding: 5px 9px; color: var(--text); border-radius: 999px; background: rgba(4, 16, 25, .82); font-size: 12px; font-weight: 800; }
