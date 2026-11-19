@@ -190,7 +190,27 @@ img { display: block; max-width: 100%; height: auto; }
 .modal-card { position: relative; z-index: 1; width: min(720px, 100%); max-height: min(88vh, 880px); overflow-y: auto; padding: clamp(24px, 5vw, 42px); color: var(--ink); border-radius: var(--radius); background: var(--paper); box-shadow: 0 28px 90px rgba(0, 0, 0, .55); animation: modal-in .22s ease-out; }
 @keyframes modal-in { from { opacity: 0; transform: translateY(14px) scale(.985); } }
 .modal-close { position: absolute; top: 13px; right: 15px; z-index: 3; display: grid; width: 40px; height: 40px; place-items: center; color: var(--ink); border: 0; border-radius: 50%; background: rgba(247, 245, 239, .9); font-size: 29px; line-height: 1; cursor: pointer; }
-.project-modal-card > img { width: calc(100% + clamp(48px, 10vw, 84px)); max-width: none; max-height: 390px; margin: calc(clamp(24px, 5vw, 42px) * -1) calc(clamp(24px, 5vw, 42px) * -1) 28px; object-fit: cover; object-position: top; background: #dce3e6; }
+.project-gallery-stage { position: relative; width: calc(100% + clamp(48px, 10vw, 84px)); max-width: none; margin: calc(clamp(24px, 5vw, 42px) * -1) calc(clamp(24px, 5vw, 42px) * -1) 14px; overflow: hidden; background: #dce3e6; }
+.project-modal-card .modal-close { position: fixed; top: calc(6vh + 13px); right: calc(max(20px, (100vw - 720px) / 2) + 15px); z-index: 10; }
+.project-gallery-main { display: block; width: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.project-gallery-main:disabled { cursor: default; }
+.project-gallery-main img { width: 100%; height: min(390px, 48vh); object-fit: cover; object-position: top; }
+.project-gallery-main:focus-visible, .project-gallery-thumbnail:focus-visible, .project-gallery-nav:focus-visible { outline: 3px solid var(--cyan); outline-offset: -4px; }
+.project-gallery-nav { position: absolute; top: 50%; min-height: 40px; padding: 9px 12px; color: var(--text); border: 1px solid rgba(255, 255, 255, .5); border-radius: 999px; background: rgba(4, 16, 25, .82); font-size: 13px; font-weight: 800; cursor: pointer; transform: translateY(-50%); }
+.project-gallery-nav.previous { left: 12px; }
+.project-gallery-nav.next { right: 12px; }
+.project-gallery-counter { position: absolute; right: 12px; bottom: 10px; padding: 5px 9px; color: var(--text); border-radius: 999px; background: rgba(4, 16, 25, .82); font-size: 12px; font-weight: 800; }
+.project-gallery-thumbnails { display: flex; gap: 9px; margin-bottom: 18px; padding: 2px; overflow-x: auto; scrollbar-width: thin; }
+.project-gallery-thumbnails[hidden] { display: none; }
+.project-gallery-thumbnail { flex: 0 0 94px; padding: 3px; border: 2px solid transparent; border-radius: 10px; background: #d9e1e4; cursor: pointer; }
+.project-gallery-thumbnail.active { border-color: var(--coral-dark); background: #fff; }
+.project-gallery-thumbnail img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border-radius: 6px; }
+.project-gallery-caption { margin: 0 0 24px; padding: 18px 20px; border-left: 4px solid var(--coral); border-radius: 0 12px 12px 0; background: #fff; }
+.project-gallery-caption[hidden] { display: none; }
+.project-gallery-caption h3 { margin: 0 0 6px; color: #163545; font-size: 20px; }
+.project-gallery-caption p { margin: 0; color: #41525b; font-size: 15px; line-height: 1.5; }
+.project-gallery-caption .project-gallery-purpose { margin-top: 8px; }
+.project-gallery-purpose strong { color: #163545; }
 .project-modal-card h2 { font-size: clamp(29px, 5vw, 42px); }
 .project-modal-card > p { color: #41525b; }
 .project-detail-sections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
@@ -316,6 +336,11 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 @media (max-width: 620px) {
+    .project-gallery-main img { height: 220px; }
+    .project-gallery-nav { top: auto; bottom: 10px; transform: none; }
+    .project-gallery-counter { right: 50%; transform: translateX(50%); }
+    .project-gallery-thumbnail { flex-basis: 78px; }
+    .project-gallery-caption { padding: 15px 16px; }
     .project-detail-sections { grid-template-columns: 1fr; }
 }
 
